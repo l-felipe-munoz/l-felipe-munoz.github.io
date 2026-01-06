@@ -358,15 +358,60 @@ layout: default
 <section id="impact" class="section">
   <div class="container">
     <div class="section__head">
-      <h2>Impact</h2>
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-rocket"></use></svg></span>
+        Impact
+      </h2>
       <p class="muted">Hands-on delivery for organizations that can’t afford downtime.</p>
     </div>
-    <div class="grid grid--3">
-      {% for item in p.impact %}
-      <div class="feature">
-        <div class="feature__title">{{ item }}</div>
+    <div class="impact-grid">
+      <div class="impact-visual">
+        <div class="impact-visual__title">Industries covered</div>
+        <div class="impact-visual__text">
+          Proven delivery across regulated and high-availability environments — with security, observability,
+          and operational excellence baked in.
+        </div>
+
+        <div class="impact-map" aria-hidden="true">
+          <span class="dot d1"></span>
+          <span class="dot d2"></span>
+          <span class="dot d3"></span>
+          <span class="dot d4"></span>
+          <span class="dot d5"></span>
+        </div>
+
+        <div class="impact-badges" aria-label="Operational focus">
+          <span class="chip">Security</span>
+          <span class="chip">Reliability</span>
+          <span class="chip">Cost efficiency</span>
+          <span class="chip">Automation</span>
+        </div>
       </div>
-      {% endfor %}
+
+      <div class="impact-list" aria-label="Impact sectors">
+        {% for item in p.impact %}
+          {% assign icon_id = 'i-spark' %}
+          {% assign tone = '#A78BFA' %}
+          {% if item contains 'Government' %}
+            {% assign icon_id = 'i-shield' %}
+            {% assign tone = '#22C55E' %}
+          {% elsif item contains 'Banking' %}
+            {% assign icon_id = 'i-cloud' %}
+            {% assign tone = '#60A5FA' %}
+          {% elsif item contains 'Retail' %}
+            {% assign icon_id = 'i-stack' %}
+            {% assign tone = '#22D3EE' %}
+          {% elsif item contains 'Healthcare' %}
+            {% assign icon_id = 'i-ai' %}
+            {% assign tone = '#F472B6' %}
+          {% endif %}
+
+          <div class="impact-pill" style="--tone: {{ tone }}">
+            <span class="impact-pill__icon" aria-hidden="true"><svg class="i"><use href="#{{ icon_id }}"></use></svg></span>
+            <span class="impact-pill__text">{{ item }}</span>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
@@ -374,17 +419,85 @@ layout: default
 <section id="contact" class="section section--alt">
   <div class="container">
     <div class="section__head">
-      <h2>Contact</h2>
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-link"></use></svg></span>
+        Contact
+      </h2>
       <p class="muted">Let’s build something resilient, secure, and high-leverage.</p>
     </div>
-    <div class="contact">
-      <a class="btn btn--primary" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">Message on LinkedIn</a>
-      <a class="btn btn--ghost" href="{{ p.links.website.url }}" rel="me noopener" target="_blank">Visit {{ p.links.website.label }}</a>
-      <a class="btn btn--ghost" href="{{ p.links.github.url }}" rel="me noopener" target="_blank">View GitHub</a>
-    </div>
+    <div class="contact-grid">
+      <div class="contact-card contact-card--primary">
+        <div class="contact-card__kicker">Let’s connect</div>
+        <div class="contact-card__title">High-leverage architecture, delivered.</div>
+        <div class="contact-card__text">
+          If you’re planning a migration, modernizing a platform, or building AI systems that must perform in production,
+          I can help you design and execute with security and reliability at the core.
+        </div>
 
-    <div class="quote" aria-label="Quote">
-      <p>{{ p.quote | newline_to_br }}</p>
+        <div class="contact-card__chips" aria-label="What I can help with">
+          <span class="chip">Cloud modernization</span>
+          <span class="chip">Platform reliability</span>
+          <span class="chip">AI systems</span>
+          <span class="chip">Multi-agent orchestration</span>
+        </div>
+
+        <div class="contact-card__cta">
+          <a class="btn btn--primary" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">Message on LinkedIn</a>
+          <a class="btn btn--ghost" href="#featured">See byCerebro</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card__kicker">Quick links</div>
+
+        <div class="contact-rows" role="list">
+          <div class="contact-row" role="listitem" style="--tone:#60A5FA">
+            <div class="contact-row__icon" aria-hidden="true"><svg class="i"><use href="#i-linkedin"></use></svg></div>
+            <div class="contact-row__main">
+              <div class="contact-row__label">LinkedIn</div>
+              <div class="contact-row__hint">Fastest way to reach me</div>
+            </div>
+            <div class="contact-row__actions">
+              <a class="btn btn--small btn--ghost" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">Open</a>
+              <button class="icon-btn icon-btn--small copy-btn" type="button" data-copy-text="{{ p.links.linkedin.url }}" aria-label="Copy LinkedIn link" title="Copy link">
+                <span class="icon-btn__glyph" aria-hidden="true"><svg class="i"><use href="#i-copy"></use></svg></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-row" role="listitem" style="--tone:#22D3EE">
+            <div class="contact-row__icon" aria-hidden="true"><svg class="i"><use href="#i-link"></use></svg></div>
+            <div class="contact-row__main">
+              <div class="contact-row__label">{{ p.links.website.label }}</div>
+              <div class="contact-row__hint">Product & platform</div>
+            </div>
+            <div class="contact-row__actions">
+              <a class="btn btn--small btn--ghost" href="{{ p.links.website.url }}" rel="me noopener" target="_blank">Open</a>
+              <button class="icon-btn icon-btn--small copy-btn" type="button" data-copy-text="{{ p.links.website.url }}" aria-label="Copy website link" title="Copy link">
+                <span class="icon-btn__glyph" aria-hidden="true"><svg class="i"><use href="#i-copy"></use></svg></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-row" role="listitem" style="--tone:#A78BFA">
+            <div class="contact-row__icon" aria-hidden="true"><svg class="i"><use href="#i-github"></use></svg></div>
+            <div class="contact-row__main">
+              <div class="contact-row__label">GitHub</div>
+              <div class="contact-row__hint">Open-source & engineering</div>
+            </div>
+            <div class="contact-row__actions">
+              <a class="btn btn--small btn--ghost" href="{{ p.links.github.url }}" rel="me noopener" target="_blank">Open</a>
+              <button class="icon-btn icon-btn--small copy-btn" type="button" data-copy-text="{{ p.links.github.url }}" aria-label="Copy GitHub link" title="Copy link">
+                <span class="icon-btn__glyph" aria-hidden="true"><svg class="i"><use href="#i-copy"></use></svg></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote quote--compact" aria-label="Quote">
+          <p>{{ p.quote | newline_to_br }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

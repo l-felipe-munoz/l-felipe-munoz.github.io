@@ -28,6 +28,44 @@
       setTheme(next);
     });
   }
+
+  // Copy-to-clipboard helpers (for contact quick links)
+  const copyButtons = document.querySelectorAll("[data-copy-text]");
+  const copyText = async (text) => {
+    if (!text) return false;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch (e) {}
+
+    // Fallback
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "true");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) {
+      return false;
+    }
+  };
+
+  copyButtons.forEach((el) => {
+    el.addEventListener("click", async () => {
+      const text = el.getAttribute("data-copy-text") || "";
+      const ok = await copyText(text);
+      if (!ok) return;
+      el.setAttribute("data-copied", "true");
+      window.setTimeout(() => el.removeAttribute("data-copied"), 1200);
+    });
+  });
 })();
 
 
