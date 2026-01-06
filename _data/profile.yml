@@ -1,11 +1,32 @@
 name: Felipe Muñoz
 role_line: Cloud Architect · AI & Multi-Agent Systems Builder · Tech Leader
 location: Latin America
-years_experience: "11+"
+years_experience: "12+"
 
 media:
   profile_photo: /assets/img/userphoto.jpg
   bycerebro_logo: /assets/img/bycerebro.svg
+
+highlights:
+  - icon: i-spark
+    tone: "#A78BFA"
+    value: "12+"
+    label: Years building & leading platforms
+  - icon: i-rocket
+    tone: "#F59E0B"
+    value: "2000+"
+    label: Servers migrated across high-impact programs
+  - icon: i-shield
+    tone: "#22C55E"
+    value: "Security"
+    label: Production-first & risk-aware delivery
+  - icon: i-briefcase
+    tone: "#60A5FA"
+    value: "100+"
+    label: Clients successfully delivered (enterprise-grade)
+  - icon_img: /assets/img/gcp-icon.svg
+    value: "First"
+    label: Google Cloud Certified – Professional Cloud Architect (Latin America)
 
 links:
   website:
@@ -23,7 +44,7 @@ links:
 
 about: >
   Hi, I’m <strong>Felipe Muñoz</strong> — cloud solutions architect and technology leader with
-  <strong>11+ years of experience</strong> designing, migrating, and operating mission-critical platforms on
+  <strong>12+ years of experience</strong> designing, migrating, and operating mission-critical platforms on
   <strong>Google Cloud</strong> for public and private sectors across Latin America.
 
   I’ve led <strong>large-scale infrastructure migrations</strong>, built <strong>data and AI platforms</strong>,
@@ -60,27 +81,43 @@ featured_project:
 
 stack:
   "Cloud & Infrastructure":
-    - Google Cloud Platform (GCP)
-    - Kubernetes (GKE Autopilot)
-    - Anthos Service Mesh / Istio
-    - Cloud Armor · Load Balancing · Identity-Aware Proxy (IAP)
-    - Terraform / Infrastructure Manager
+    - Google Cloud Platform (GCP) · Cloud Run · API Gateway · Apigee
+    - Kubernetes (GKE Autopilot) · Anthos Service Mesh / Istio
+    - Load Balancing · Cloud Armor · Identity-Aware Proxy (IAP)
+    - IAM · Organization Policy · Secret Manager
+    - Terraform · Infrastructure Manager
+  Security:
+    - Security Command Center · Event Threat Detection
+    - Cloud KMS · Key management
+    - VPC Service Controls · Data Loss Prevention (DLP)
+    - Cloud Audit Logs · Access Transparency
+    - Artifact Registry (scanning) · Binary Authorization
+  "Enterprise Cloud Architecture Design":
+    - Hub-and-Spoke networking · Shared VPC
+    - Cloud Interconnect · Cloud VPN · Cloud Router
+    - Landing zones · Multi-project org design
+    - Network segmentation · DNS design
+    - Resiliency patterns · DR / HA
   "Data & Analytics":
-    - BigQuery · Dataplex
+    - BigQuery · Dataplex · Dataform
+    - Pub/Sub · Dataflow · Cloud Composer
     - Firestore · Cloud SQL · AlloyDB
-    - Pub/Sub · Dataflow · Looker
+    - Cloud Storage · Datastream · Bigtable
+    - Looker · Governance · Data quality
   "AI & Automation":
     - Vertex AI · Gemini
     - Agent Development Kit (ADK)
     - Multi-agent systems
     - NLP, classification, scoring, and document automation
   "Dev & Ops":
-    - GitHub · Cloud Build
-    - CI/CD · DevSecOps
+    - GitHub · GitHub Actions · Cloud Build
+    - GitLab CI · Jenkins · Supply-chain security
+    - CI/CD · DevSecOps · Policy as Code
     - Observability & FinOps
 
 relevant_experience:
   - Migration of <strong>450+ servers</strong> (public sector)
+  - Migration of <strong>600+ servers</strong> (private sector)
   - Modernization of mission-critical platforms on GCP
   - Leadership of distributed IT teams across the Americas
   - AI-driven solutions for ministries and government entities
@@ -97,10 +134,10 @@ clients:
     detail: Migration of the full application platform to the cloud
 
 beyond_engineering:
-  - Google Cloud speaker and instructor
+  - <strong>Google Cloud</strong> speaker and instructor
   - Certification-focused technical trainer
   - Technical mentor and senior team leader
-  - Product builder — not just a consultant
+  - Product builder — <strong>not just a consultant</strong>
 
 impact:
   - Government and public sector

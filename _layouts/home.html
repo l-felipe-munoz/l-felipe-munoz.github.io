@@ -77,7 +77,10 @@ layout: default
 <section id="about" class="section">
   <div class="container">
     <div class="section__head">
-      <h2>About</h2>
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-spark"></use></svg></span>
+        About
+      </h2>
       <p class="muted">Builder mindset. Production-first. Business-aligned architecture.</p>
     </div>
     <div class="grid grid--2">
@@ -86,12 +89,31 @@ layout: default
       </div>
       <div class="panel">
         <h3 class="panel__title">What I believe in</h3>
-        <ul class="list">
+        <div class="grid grid--2">
           {% for item in p.beliefs %}
-          <li>{{ item }}</li>
+          <div class="mini-card">
+            <div class="mini-card__icon"><svg class="i"><use href="#i-check"></use></svg></div>
+            <div class="mini-card__text">{{ item }}</div>
+          </div>
           {% endfor %}
-        </ul>
+        </div>
       </div>
+    </div>
+
+    <div class="highlights" aria-label="Highlights">
+      {% for h in p.highlights %}
+      <div class="highlight" {% if h.tone %}style="--tone: {{ h.tone }}"{% endif %}>
+        <div class="highlight__icon">
+          {% if h.icon_img %}
+            <img class="highlight__img" src="{{ h.icon_img | relative_url }}" alt="" loading="lazy" decoding="async" />
+          {% else %}
+            <svg class="i"><use href="#{{ h.icon }}"></use></svg>
+          {% endif %}
+        </div>
+        <div class="highlight__value">{{ h.value }}</div>
+        <div class="highlight__label">{{ h.label }}</div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -99,15 +121,80 @@ layout: default
 <section id="build" class="section section--alt">
   <div class="container">
     <div class="section__head">
-      <h2>What I build</h2>
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-stack"></use></svg></span>
+        What I build
+      </h2>
       <p class="muted">Systems that scale, endure pressure, and ship value.</p>
     </div>
-    <div class="grid grid--3">
-      {% for item in p.what_i_build %}
-      <div class="feature">
-        <div class="feature__title">{{ item }}</div>
+    <div class="build-grid">
+      <div class="build-visual">
+        <div class="build-visual__kicker">Execution, not slideware</div>
+        <div class="build-visual__title">From architecture to outcomes.</div>
+        <div class="build-visual__text">
+          Cloud-native platforms, AI systems, and multi-agent orchestration designed for production:
+          security, reliability, and cost discipline built-in.
+        </div>
+
+        <div class="build-diagram" aria-label="Delivery flow">
+          <div class="build-node">
+            <div class="build-node__icon"><svg class="i"><use href="#i-cloud"></use></svg></div>
+            <div class="build-node__label">Design</div>
+          </div>
+          <div class="build-arrow" aria-hidden="true"></div>
+          <div class="build-node">
+            <div class="build-node__icon"><svg class="i"><use href="#i-stack"></use></svg></div>
+            <div class="build-node__label">Build</div>
+          </div>
+          <div class="build-arrow" aria-hidden="true"></div>
+          <div class="build-node">
+            <div class="build-node__icon"><svg class="i"><use href="#i-shield"></use></svg></div>
+            <div class="build-node__label">Operate</div>
+          </div>
+        </div>
+
+        <div class="build-badges" aria-label="Core principles">
+          <span class="chip">Security-first</span>
+          <span class="chip">Production-grade</span>
+          <span class="chip">Cost-aware</span>
+          <span class="chip">Automation</span>
+        </div>
       </div>
-      {% endfor %}
+
+      <div class="build-items" aria-label="What I build list">
+        {% for item in p.what_i_build %}
+          {% assign icon_id = 'i-rocket' %}
+          {% assign tone = '#60A5FA' %}
+
+          {% if item contains 'AI' or item contains 'Multi-agent' %}
+            {% assign icon_id = 'i-ai' %}
+            {% assign tone = '#F472B6' %}
+          {% endif %}
+          {% if item contains 'Multi-agent' %}
+            {% assign icon_id = 'i-agents' %}
+            {% assign tone = '#A78BFA' %}
+          {% endif %}
+          {% if item contains 'Secure' %}
+            {% assign icon_id = 'i-shield' %}
+            {% assign tone = '#22C55E' %}
+          {% endif %}
+          {% if item contains 'cloud-native' %}
+            {% assign icon_id = 'i-cloud' %}
+            {% assign tone = '#60A5FA' %}
+          {% endif %}
+          {% if item contains 'Infrastructure' %}
+            {% assign icon_id = 'i-stack' %}
+            {% assign tone = '#22D3EE' %}
+          {% endif %}
+
+          <div class="build-item" style="--tone: {{ tone }}">
+            <div class="build-item__icon"><svg class="i"><use href="#{{ icon_id }}"></use></svg></div>
+            <div class="build-item__content">
+              <div class="build-item__title">{{ item }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
@@ -156,19 +243,64 @@ layout: default
 <section id="stack" class="section section--alt">
   <div class="container">
     <div class="section__head">
-      <h2>Tech Stack</h2>
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-cloud"></use></svg></span>
+        Tech Stack
+      </h2>
       <p class="muted">Cloud, data, AI, and operations — end to end.</p>
     </div>
-    <div class="grid grid--2">
+    <div class="stack-grid">
       {% for group in p.stack %}
-      <div class="panel">
-        <h3 class="panel__title">{{ group[0] }}</h3>
-        <ul class="list">
-          {% for item in group[1] %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
+        {% assign group_name = group[0] %}
+        {% assign icon_id = 'i-stack' %}
+        {% assign tone = '#A78BFA' %}
+
+        {% if group_name contains 'Security' %}
+          {% assign icon_id = 'i-shield' %}
+          {% assign tone = '#22C55E' %}
+        {% elsif group_name contains 'Enterprise' %}
+          {% assign icon_id = 'i-cloud' %}
+          {% assign tone = '#A78BFA' %}
+        {% elsif group_name contains 'Cloud' %}
+          {% assign icon_id = 'i-cloud' %}
+          {% assign tone = '#60A5FA' %}
+        {% elsif group_name contains 'Data' %}
+          {% assign icon_id = 'i-stack' %}
+          {% assign tone = '#22D3EE' %}
+        {% elsif group_name contains 'AI' %}
+          {% assign icon_id = 'i-ai' %}
+          {% assign tone = '#F472B6' %}
+        {% elsif group_name contains 'Dev' %}
+          {% assign icon_id = 'i-briefcase' %}
+          {% assign tone = '#93C5FD' %}
+        {% endif %}
+
+        <div class="stack-card" style="--tone: {{ tone }}">
+          <div class="stack-card__head">
+            <div class="stack-card__icon" aria-hidden="true">
+              <svg class="i"><use href="#{{ icon_id }}"></use></svg>
+            </div>
+            <div class="stack-card__title">{{ group_name }}</div>
+          </div>
+
+          <div class="stack-card__chips" aria-label="{{ group_name }} highlights">
+            {% for item in group[1] limit:2 %}
+              {% assign chips = item | split: "·" %}
+              {% for c in chips %}
+                {% assign c_trim = c | strip %}
+                {% if c_trim != "" %}
+                  <span class="chip">{{ c_trim }}</span>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+
+          <ul class="stack-card__list list list--checks">
+            {% for item in group[1] offset:2 %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
       {% endfor %}
     </div>
   </div>
@@ -177,12 +309,15 @@ layout: default
 <section id="experience" class="section">
   <div class="container">
     <div class="section__head">
-      <h2>Relevant experience</h2>
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-briefcase"></use></svg></span>
+        Relevant experience
+      </h2>
       <p class="muted">Large-scale migrations, platform modernization, security & cost discipline.</p>
     </div>
     <div class="grid grid--2">
       <div class="panel">
-        <ul class="list">
+        <ul class="list list--checks">
           {% for item in p.relevant_experience %}
           <li>{{ item }}</li>
           {% endfor %}
@@ -190,7 +325,7 @@ layout: default
       </div>
       <div class="panel">
         <h3 class="panel__title">Beyond engineering</h3>
-        <ul class="list">
+        <ul class="list list--checks">
           {% for item in p.beyond_engineering %}
           <li>{{ item }}</li>
           {% endfor %}
@@ -203,7 +338,10 @@ layout: default
 <section id="clients" class="section section--alt">
   <div class="container">
     <div class="section__head">
-      <h2>Selected enterprise clients</h2>
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-shield"></use></svg></span>
+        Selected enterprise clients
+      </h2>
       <p class="muted">High-impact projects across government and enterprise.</p>
     </div>
     <div class="grid grid--2">
