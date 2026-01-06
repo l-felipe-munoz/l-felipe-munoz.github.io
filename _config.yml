@@ -1,0 +1,38 @@
+title: Felipe Muñoz
+tagline: Cloud Architect · AI & Multi-Agent Systems Builder · Tech Leader
+description: Cloud Architect and technology leader focused on production-grade platforms on Google Cloud and AI agent orchestration.
+
+# GitHub Pages (user site)
+url: "https://l-felipe-munoz.github.io"
+baseurl: ""
+
+lang: en
+timezone: America/Bogota
+
+author:
+  name: Felipe Muñoz
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+

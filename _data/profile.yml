@@ -1,0 +1,113 @@
+name: Felipe Muñoz
+role_line: Cloud Architect · AI & Multi-Agent Systems Builder · Tech Leader
+location: Latin America
+years_experience: "11+"
+
+media:
+  profile_photo: /assets/img/userphoto.jpg
+  bycerebro_logo: /assets/img/bycerebro.svg
+
+links:
+  website:
+    label: byCerebro
+    url: https://bycerebro.com
+  github_pages:
+    label: GitHub Pages
+    url: https://l-felipe-munoz.github.io/
+  linkedin:
+    label: LinkedIn
+    url: https://www.linkedin.com/in/felipe-munoz-arroyave/
+  github:
+    label: GitHub
+    url: https://github.com/l-felipe-munoz
+
+about: >
+  Hi, I’m <strong>Felipe Muñoz</strong> — cloud solutions architect and technology leader with
+  <strong>11+ years of experience</strong> designing, migrating, and operating mission-critical platforms on
+  <strong>Google Cloud</strong> for public and private sectors across Latin America.
+
+  I’ve led <strong>large-scale infrastructure migrations</strong>, built <strong>data and AI platforms</strong>,
+  and I’m currently building <strong>byCerebro</strong>, a SaaS platform for <strong>AI agent orchestration</strong>
+  focused on automating real, high-impact business processes.
+
+beliefs:
+  - Cloud is not infrastructure — it’s <strong>execution capability</strong>
+  - AI is not a model — it’s a <strong>living system</strong>
+  - Architecture should serve the business, not the other way around
+  - Automation is a <strong>competitive advantage</strong>, not a luxury
+
+what_i_build:
+  - Secure, scalable <strong>cloud-native platforms</strong>
+  - <strong>Production-grade AI systems</strong> (not demos)
+  - <strong>Multi-agent</strong> and event-driven architectures
+  - Infrastructure as Code ready for real-world operations
+  - Solutions for <strong>government, banking, retail, and healthcare</strong>
+
+featured_project:
+  name: byCerebro
+  summary: >
+    <strong>byCerebro</strong> is a next-generation SaaS platform focused on AI agent orchestration and end-to-end
+    business process automation, with seamless integration into cloud ecosystems and enterprise APIs.
+  bullets:
+    - AI agent orchestration
+    - End-to-end business process automation
+    - Seamless integration with cloud ecosystems and enterprise APIs
+  built_on:
+    - Google Cloud Agent Development Kit (ADK)
+    - Vertex AI Agent Engine
+    - Secure, scalable, multi-tenant architecture
+  note: From innovation award–winning prototype to a growing commercial product.
+
+stack:
+  "Cloud & Infrastructure":
+    - Google Cloud Platform (GCP)
+    - Kubernetes (GKE Autopilot)
+    - Anthos Service Mesh / Istio
+    - Cloud Armor · Load Balancing · Identity-Aware Proxy (IAP)
+    - Terraform / Infrastructure Manager
+  "Data & Analytics":
+    - BigQuery · Dataplex
+    - Firestore · Cloud SQL · AlloyDB
+    - Pub/Sub · Dataflow · Looker
+  "AI & Automation":
+    - Vertex AI · Gemini
+    - Agent Development Kit (ADK)
+    - Multi-agent systems
+    - NLP, classification, scoring, and document automation
+  "Dev & Ops":
+    - GitHub · Cloud Build
+    - CI/CD · DevSecOps
+    - Observability & FinOps
+
+relevant_experience:
+  - Migration of <strong>450+ servers</strong> (public sector)
+  - Modernization of mission-critical platforms on GCP
+  - Leadership of distributed IT teams across the Americas
+  - AI-driven solutions for ministries and government entities
+  - Architecture design with a strong focus on <strong>security, cost efficiency, and scalability</strong>
+
+clients:
+  - name: Banco Davivienda
+    detail: Kubernetes, DevSecOps
+  - name: Ministry of National Defense (Colombia)
+    detail: Full Google Cloud implementation for military environments
+  - name: Cali City Hall (Alcaldía de Cali)
+    detail: Migration of the entire datacenter to the cloud
+  - name: Farmatodo
+    detail: Migration of the full application platform to the cloud
+
+beyond_engineering:
+  - Google Cloud speaker and instructor
+  - Certification-focused technical trainer
+  - Technical mentor and senior team leader
+  - Product builder — not just a consultant
+
+impact:
+  - Government and public sector
+  - Banking and financial services
+  - Retail and logistics
+  - Healthcare and education
+
+quote: |
+  “The best architecture is the one you don’t notice —
+  but it scales, withstands pressure, and delivers value.”

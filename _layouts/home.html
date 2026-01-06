@@ -1,0 +1,254 @@
+---
+layout: default
+---
+
+{% assign p = site.data.profile %}
+
+<header class="hero">
+  <div class="container hero__inner">
+    <aside class="hero__profile" aria-label="Profile">
+      <img
+        class="avatar avatar--hero"
+        src="{{ p.media.profile_photo | relative_url }}"
+        alt="Felipe Muñoz"
+        width="168"
+        height="168"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+      <div class="hero__profile-text">
+        <p class="eyebrow">{{ p.name }}</p>
+        <p class="hero__meta">{{ p.location }} · {{ p.years_experience }} years</p>
+        <div class="hero__profile-links" aria-label="Primary links">
+          <a class="pill" href="{{ p.links.website.url }}" rel="me noopener" target="_blank">{{ p.links.website.label }}</a>
+          <a class="pill" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">{{ p.links.linkedin.label }}</a>
+          <a class="pill" href="{{ p.links.github.url }}" rel="me noopener" target="_blank">{{ p.links.github.label }}</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="hero__main">
+      <div class="hero__card">
+        <div class="glow"></div>
+        <div class="card">
+          <div class="card__kicker">Now building</div>
+          <div class="card__brand">
+            <img
+              class="card__logo"
+              src="{{ p.media.bycerebro_logo | relative_url }}"
+              alt="{{ p.featured_project.name }} logo"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <div class="card__brand-name">{{ p.featured_project.name }}</div>
+          </div>
+          <div class="card__text">{{ p.featured_project.note }}</div>
+          <div class="card__meta">
+            <span class="tag">GCP</span>
+            <span class="tag">Vertex AI</span>
+            <span class="tag">Multi-agent</span>
+            <span class="tag">Security</span>
+          </div>
+          <div class="card__cta">
+            <a class="btn btn--small btn--primary" href="#featured">Explore</a>
+            <a class="btn btn--small btn--ghost" href="{{ p.links.website.url }}" rel="me noopener" target="_blank">Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__copy hero__copy--full">
+      <h1 class="hero__title">{{ p.role_line }}</h1>
+      <p class="hero__lead">
+        Cloud Architect and tech leader building production-grade platforms on Google Cloud and
+        AI agent orchestration for real business outcomes.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn--primary" href="#featured">Featured: {{ p.featured_project.name }}</a>
+        <a class="btn btn--ghost" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>About</h2>
+      <p class="muted">Builder mindset. Production-first. Business-aligned architecture.</p>
+    </div>
+    <div class="grid grid--2">
+      <div class="prose">
+        <p>{{ p.about }}</p>
+      </div>
+      <div class="panel">
+        <h3 class="panel__title">What I believe in</h3>
+        <ul class="list">
+          {% for item in p.beliefs %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="build" class="section section--alt">
+  <div class="container">
+    <div class="section__head">
+      <h2>What I build</h2>
+      <p class="muted">Systems that scale, endure pressure, and ship value.</p>
+    </div>
+    <div class="grid grid--3">
+      {% for item in p.what_i_build %}
+      <div class="feature">
+        <div class="feature__title">{{ item }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="featured" class="section">
+  <div class="container">
+    <div class="section__head">
+      <div class="project-head">
+        <img
+          class="project-logo"
+          src="{{ p.media.bycerebro_logo | relative_url }}"
+          alt="{{ p.featured_project.name }} logo"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="project-head__text">
+          <h2>Featured Project: {{ p.featured_project.name }}</h2>
+          <p class="muted">AI agent orchestration for end-to-end business automation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid--2">
+      <div class="panel panel--strong">
+        <div class="prose">
+          <p>{{ p.featured_project.summary }}</p>
+          <ul class="list">
+            {% for b in p.featured_project.bullets %}
+            <li>{{ b }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="panel__title">Built on</h3>
+        <ul class="list">
+          {% for b in p.featured_project.built_on %}
+          <li>{{ b }}</li>
+          {% endfor %}
+        </ul>
+        <p class="muted small">{{ p.featured_project.note }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stack" class="section section--alt">
+  <div class="container">
+    <div class="section__head">
+      <h2>Tech Stack</h2>
+      <p class="muted">Cloud, data, AI, and operations — end to end.</p>
+    </div>
+    <div class="grid grid--2">
+      {% for group in p.stack %}
+      <div class="panel">
+        <h3 class="panel__title">{{ group[0] }}</h3>
+        <ul class="list">
+          {% for item in group[1] %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Relevant experience</h2>
+      <p class="muted">Large-scale migrations, platform modernization, security & cost discipline.</p>
+    </div>
+    <div class="grid grid--2">
+      <div class="panel">
+        <ul class="list">
+          {% for item in p.relevant_experience %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="panel">
+        <h3 class="panel__title">Beyond engineering</h3>
+        <ul class="list">
+          {% for item in p.beyond_engineering %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="clients" class="section section--alt">
+  <div class="container">
+    <div class="section__head">
+      <h2>Selected enterprise clients</h2>
+      <p class="muted">High-impact projects across government and enterprise.</p>
+    </div>
+    <div class="grid grid--2">
+      {% for c in p.clients %}
+      <div class="client">
+        <div class="client__name">{{ c.name }}</div>
+        <div class="client__detail">{{ c.detail }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="impact" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Impact</h2>
+      <p class="muted">Hands-on delivery for organizations that can’t afford downtime.</p>
+    </div>
+    <div class="grid grid--3">
+      {% for item in p.impact %}
+      <div class="feature">
+        <div class="feature__title">{{ item }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section section--alt">
+  <div class="container">
+    <div class="section__head">
+      <h2>Contact</h2>
+      <p class="muted">Let’s build something resilient, secure, and high-leverage.</p>
+    </div>
+    <div class="contact">
+      <a class="btn btn--primary" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">Message on LinkedIn</a>
+      <a class="btn btn--ghost" href="{{ p.links.website.url }}" rel="me noopener" target="_blank">Visit {{ p.links.website.label }}</a>
+      <a class="btn btn--ghost" href="{{ p.links.github.url }}" rel="me noopener" target="_blank">View GitHub</a>
+    </div>
+
+    <div class="quote" aria-label="Quote">
+      <p>{{ p.quote | newline_to_br }}</p>
+    </div>
+  </div>
+</section>
+
+

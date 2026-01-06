@@ -1,0 +1,16 @@
+{% assign p = site.data.profile %}
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__left">
+      <div class="footer__brand">Felipe Muñoz</div>
+      <div class="footer__muted">{{ p.role_line }}</div>
+    </div>
+    <div class="footer__right">
+      <a href="{{ p.links.website.url }}" rel="me noopener" target="_blank">{{ p.links.website.label }}</a>
+      <a href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">LinkedIn</a>
+      <a href="{{ p.links.github.url }}" rel="me noopener" target="_blank">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+
