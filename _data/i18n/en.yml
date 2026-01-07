@@ -1,0 +1,94 @@
+nav:
+  about: About
+  bycerebro: byCerebro
+  stack: Stack
+  certifications: Certifications
+  platzi: Platzi
+  experience: Experience
+  clients: Clients
+  contact: Contact
+  linkedin: LinkedIn
+  lang_es: ES
+  lang_en: EN
+
+hero:
+  lead: >
+    Cloud Architect and tech leader building production‑grade platforms on Google Cloud and
+    AI agent orchestration for real business outcomes.
+  cta_featured: "Featured: %{project}"
+  cta_contact: Contact
+
+sections:
+  about:
+    title: About
+    subtitle: Builder mindset. Production‑first. Business‑aligned architecture.
+    beliefs_title: What I believe in
+  build:
+    title: What I build
+    subtitle: Systems that scale, endure pressure, and ship value.
+    visual_kicker: Execution, not slideware
+    visual_title: From architecture to outcomes.
+    visual_text: >
+      Cloud‑native platforms, AI systems, and multi‑agent orchestration designed for production:
+      security, reliability, and cost discipline built‑in.
+    flow_design: Design
+    flow_build: Build
+    flow_operate: Operate
+    badge_security: Security‑first
+    badge_production: Production‑grade
+    badge_cost: Cost‑aware
+    badge_automation: Automation
+  featured:
+    title: "Featured Project: %{project}"
+    subtitle: AI agent orchestration for end‑to‑end business automation.
+    built_on: Built on
+  stack:
+    title: Tech Stack
+    subtitle: Cloud, data, AI, and operations — end to end.
+  certifications:
+    title: Certifications
+    subtitle: Credentials that back execution and production delivery.
+    meta: Verified credentials
+  platzi:
+    cta_view: View course
+    cta_work: Work with me
+  experience:
+    title: Relevant experience
+    subtitle: Large‑scale migrations, platform modernization, security & cost discipline.
+    beyond: Beyond engineering
+  clients:
+    title: Selected enterprise clients
+    subtitle: High‑impact projects across government and enterprise.
+  impact:
+    title: Impact
+    subtitle: Hands‑on delivery for organizations that can’t afford downtime.
+    visual_title: Industries covered
+    visual_text: >
+      Proven delivery across regulated and high‑availability environments — with security, observability,
+      and operational excellence baked in.
+    badge_security: Security
+    badge_reliability: Reliability
+    badge_cost: Cost efficiency
+    badge_automation: Automation
+  contact:
+    title: Contact
+    subtitle: Let’s build something resilient, secure, and high‑leverage.
+    connect_kicker: Let’s connect
+    connect_title: High‑leverage architecture, delivered.
+    connect_text: >
+      If you’re planning a migration, modernizing a platform, or building AI systems that must perform in production,
+      I can help you design and execute with security and reliability at the core.
+    chip_modernization: Cloud modernization
+    chip_reliability: Platform reliability
+    chip_ai: AI systems
+    chip_agents: Multi‑agent orchestration
+    quick_kicker: Quick links
+    linkedin_hint: Fastest way to reach me
+    bycerebro_hint: Product & platform
+    github_hint: Open‑source & engineering
+    open: Open
+
+copy:
+  copy: Copy
+  copied: Copied
+

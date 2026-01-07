@@ -2,7 +2,11 @@
 layout: default
 ---
 
-{% assign p = site.data.profile %}
+{% assign lang = page.lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign p = site.data.profiles[lang] %}
+{% assign hero_cta_featured = t.hero.cta_featured | replace: '%{project}', p.featured_project.name %}
+{% assign featured_title = t.sections.featured.title | replace: '%{project}', p.featured_project.name %}
 
 <header class="hero">
   <div class="container hero__inner">
@@ -61,14 +65,11 @@ layout: default
 
     <div class="hero__copy hero__copy--full">
       <h1 class="hero__title">{{ p.role_line }}</h1>
-      <p class="hero__lead">
-        Cloud Architect and tech leader building production-grade platforms on Google Cloud and
-        AI agent orchestration for real business outcomes.
-      </p>
+      <p class="hero__lead">{{ t.hero.lead }}</p>
 
       <div class="cta-row">
-        <a class="btn btn--primary" href="#featured">Featured: {{ p.featured_project.name }}</a>
-        <a class="btn btn--ghost" href="#contact">Contact</a>
+        <a class="btn btn--primary" href="#featured">{{ hero_cta_featured }}</a>
+        <a class="btn btn--ghost" href="#contact">{{ t.hero.cta_contact }}</a>
       </div>
     </div>
   </div>
@@ -79,16 +80,16 @@ layout: default
     <div class="section__head">
       <h2>
         <span class="hicon"><svg class="i"><use href="#i-spark"></use></svg></span>
-        About
+        {{ t.sections.about.title }}
       </h2>
-      <p class="muted">Builder mindset. Production-first. Business-aligned architecture.</p>
+      <p class="muted">{{ t.sections.about.subtitle }}</p>
     </div>
     <div class="grid grid--2">
       <div class="prose">
         <p>{{ p.about }}</p>
       </div>
       <div class="panel">
-        <h3 class="panel__title">What I believe in</h3>
+        <h3 class="panel__title">{{ t.sections.about.beliefs_title }}</h3>
         <div class="grid grid--2">
           {% for item in p.beliefs %}
           <div class="mini-card">
@@ -123,41 +124,38 @@ layout: default
     <div class="section__head">
       <h2>
         <span class="hicon"><svg class="i"><use href="#i-stack"></use></svg></span>
-        What I build
+        {{ t.sections.build.title }}
       </h2>
-      <p class="muted">Systems that scale, endure pressure, and ship value.</p>
+      <p class="muted">{{ t.sections.build.subtitle }}</p>
     </div>
     <div class="build-grid">
       <div class="build-visual">
-        <div class="build-visual__kicker">Execution, not slideware</div>
-        <div class="build-visual__title">From architecture to outcomes.</div>
-        <div class="build-visual__text">
-          Cloud-native platforms, AI systems, and multi-agent orchestration designed for production:
-          security, reliability, and cost discipline built-in.
-        </div>
+        <div class="build-visual__kicker">{{ t.sections.build.visual_kicker }}</div>
+        <div class="build-visual__title">{{ t.sections.build.visual_title }}</div>
+        <div class="build-visual__text">{{ t.sections.build.visual_text }}</div>
 
         <div class="build-diagram" aria-label="Delivery flow">
           <div class="build-node">
             <div class="build-node__icon"><svg class="i"><use href="#i-cloud"></use></svg></div>
-            <div class="build-node__label">Design</div>
+            <div class="build-node__label">{{ t.sections.build.flow_design }}</div>
           </div>
           <div class="build-arrow" aria-hidden="true"></div>
           <div class="build-node">
             <div class="build-node__icon"><svg class="i"><use href="#i-stack"></use></svg></div>
-            <div class="build-node__label">Build</div>
+            <div class="build-node__label">{{ t.sections.build.flow_build }}</div>
           </div>
           <div class="build-arrow" aria-hidden="true"></div>
           <div class="build-node">
             <div class="build-node__icon"><svg class="i"><use href="#i-shield"></use></svg></div>
-            <div class="build-node__label">Operate</div>
+            <div class="build-node__label">{{ t.sections.build.flow_operate }}</div>
           </div>
         </div>
 
         <div class="build-badges" aria-label="Core principles">
-          <span class="chip">Security-first</span>
-          <span class="chip">Production-grade</span>
-          <span class="chip">Cost-aware</span>
-          <span class="chip">Automation</span>
+          <span class="chip">{{ t.sections.build.badge_security }}</span>
+          <span class="chip">{{ t.sections.build.badge_production }}</span>
+          <span class="chip">{{ t.sections.build.badge_cost }}</span>
+          <span class="chip">{{ t.sections.build.badge_automation }}</span>
         </div>
       </div>
 
@@ -211,8 +209,8 @@ layout: default
           decoding="async"
         />
         <div class="project-head__text">
-          <h2>Featured Project: {{ p.featured_project.name }}</h2>
-          <p class="muted">AI agent orchestration for end-to-end business automation.</p>
+          <h2>{{ featured_title }}</h2>
+          <p class="muted">{{ t.sections.featured.subtitle }}</p>
         </div>
       </div>
     </div>
@@ -228,7 +226,7 @@ layout: default
         </div>
       </div>
       <div class="panel">
-        <h3 class="panel__title">Built on</h3>
+        <h3 class="panel__title">{{ t.sections.featured.built_on }}</h3>
         <ul class="list">
           {% for b in p.featured_project.built_on %}
           <li>{{ b }}</li>
@@ -245,9 +243,9 @@ layout: default
     <div class="section__head">
       <h2>
         <span class="hicon"><svg class="i"><use href="#i-cloud"></use></svg></span>
-        Tech Stack
+        {{ t.sections.stack.title }}
       </h2>
-      <p class="muted">Cloud, data, AI, and operations — end to end.</p>
+      <p class="muted">{{ t.sections.stack.subtitle }}</p>
     </div>
     <div class="stack-grid">
       {% for group in p.stack %}
@@ -306,14 +304,94 @@ layout: default
   </div>
 </section>
 
+<section id="certifications" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-check"></use></svg></span>
+        {{ t.sections.certifications.title }}
+      </h2>
+      <p class="muted">{{ t.sections.certifications.subtitle }}</p>
+    </div>
+
+    <div class="cert-grid">
+      {% for vendor in p.certifications %}
+        {% assign vendor_name = vendor[0] %}
+        {% assign vendor_logo = '' %}
+        {% if vendor_name contains 'GitLab' %}
+          {% assign vendor_logo = '/assets/img/gitlab.svg' %}
+        {% elsif vendor_name contains 'Google' %}
+          {% assign vendor_logo = '/assets/img/gcp-icon.svg' %}
+        {% endif %}
+
+        <div class="cert-card">
+          <div class="cert-card__head">
+            <div class="cert-card__brand">
+              {% if vendor_logo != '' %}
+                <span class="cert-logo" aria-hidden="true">
+                  <img class="cert-logo__img" src="{{ vendor_logo | relative_url }}" alt="" loading="lazy" decoding="async" />
+                </span>
+              {% endif %}
+              <div class="cert-card__vendor">{{ vendor_name }}</div>
+            </div>
+            <div class="cert-card__meta muted small">{{ t.sections.certifications.meta }}</div>
+          </div>
+
+          <div class="cert-cloud" aria-label="{{ vendor_name }} certifications">
+            {% for c in vendor[1] %}
+              <div class="cert-pill">
+                <span class="cert-pill__dot" aria-hidden="true"></span>
+                <span class="cert-pill__name">{{ c.name }}</span>
+                {% if c.year %}
+                  <span class="cert-pill__year">{{ c.year }}</span>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="platzi" class="section section--alt">
+  <div class="container">
+    <div class="platzi-card" role="region" aria-label="Platzi course">
+      <a class="platzi-card__media platzi-media" href="{{ p.platzi_course.url }}" rel="me noopener" target="_blank" aria-label="Open Platzi course in a new tab">
+        <img class="platzi-thumb" src="{{ p.platzi_course.thumbnail | relative_url }}" alt="" loading="lazy" decoding="async" />
+        <span class="play" aria-hidden="true">
+          <span class="play__btn">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M9 7.5v9l8-4.5-8-4.5Z"/>
+            </svg>
+          </span>
+        </span>
+      </a>
+      <div class="platzi-card__body">
+        <div class="platzi-card__kicker">
+          <img class="platzi-logo" src="{{ '/assets/img/platzi-logo-minty.svg' | relative_url }}" alt="Platzi" loading="lazy" decoding="async" />
+        </div>
+        <div class="platzi-card__title">{{ p.platzi_course.title }}</div>
+        <div class="platzi-card__text">{{ p.platzi_course.claim }}</div>
+        <div class="platzi-card__cta">
+          <a class="btn btn--primary platzi-btn" href="{{ p.platzi_course.url }}" rel="me noopener" target="_blank">
+            {{ t.sections.platzi.cta_view }}
+          </a>
+          <a class="btn btn--ghost platzi-btn-ghost" href="#contact">{{ t.sections.platzi.cta_work }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="experience" class="section">
   <div class="container">
     <div class="section__head">
       <h2>
         <span class="hicon"><svg class="i"><use href="#i-briefcase"></use></svg></span>
-        Relevant experience
+        {{ t.sections.experience.title }}
       </h2>
-      <p class="muted">Large-scale migrations, platform modernization, security & cost discipline.</p>
+      <p class="muted">{{ t.sections.experience.subtitle }}</p>
     </div>
     <div class="grid grid--2">
       <div class="panel">
@@ -324,7 +402,7 @@ layout: default
         </ul>
       </div>
       <div class="panel">
-        <h3 class="panel__title">Beyond engineering</h3>
+        <h3 class="panel__title">{{ t.sections.experience.beyond }}</h3>
         <ul class="list list--checks">
           {% for item in p.beyond_engineering %}
           <li>{{ item }}</li>
@@ -340,9 +418,9 @@ layout: default
     <div class="section__head">
       <h2>
         <span class="hicon"><svg class="i"><use href="#i-shield"></use></svg></span>
-        Selected enterprise clients
+        {{ t.sections.clients.title }}
       </h2>
-      <p class="muted">High-impact projects across government and enterprise.</p>
+      <p class="muted">{{ t.sections.clients.subtitle }}</p>
     </div>
     <div class="grid grid--2">
       {% for c in p.clients %}
@@ -360,17 +438,14 @@ layout: default
     <div class="section__head">
       <h2>
         <span class="hicon"><svg class="i"><use href="#i-rocket"></use></svg></span>
-        Impact
+        {{ t.sections.impact.title }}
       </h2>
-      <p class="muted">Hands-on delivery for organizations that can’t afford downtime.</p>
+      <p class="muted">{{ t.sections.impact.subtitle }}</p>
     </div>
     <div class="impact-grid">
       <div class="impact-visual">
-        <div class="impact-visual__title">Industries covered</div>
-        <div class="impact-visual__text">
-          Proven delivery across regulated and high-availability environments — with security, observability,
-          and operational excellence baked in.
-        </div>
+        <div class="impact-visual__title">{{ t.sections.impact.visual_title }}</div>
+        <div class="impact-visual__text">{{ t.sections.impact.visual_text }}</div>
 
         <div class="impact-map" aria-hidden="true">
           <span class="dot d1"></span>
@@ -381,10 +456,10 @@ layout: default
         </div>
 
         <div class="impact-badges" aria-label="Operational focus">
-          <span class="chip">Security</span>
-          <span class="chip">Reliability</span>
-          <span class="chip">Cost efficiency</span>
-          <span class="chip">Automation</span>
+          <span class="chip">{{ t.sections.impact.badge_security }}</span>
+          <span class="chip">{{ t.sections.impact.badge_reliability }}</span>
+          <span class="chip">{{ t.sections.impact.badge_cost }}</span>
+          <span class="chip">{{ t.sections.impact.badge_automation }}</span>
         </div>
       </div>
 
@@ -421,44 +496,41 @@ layout: default
     <div class="section__head">
       <h2>
         <span class="hicon"><svg class="i"><use href="#i-link"></use></svg></span>
-        Contact
+        {{ t.sections.contact.title }}
       </h2>
-      <p class="muted">Let’s build something resilient, secure, and high-leverage.</p>
+      <p class="muted">{{ t.sections.contact.subtitle }}</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card contact-card--primary">
-        <div class="contact-card__kicker">Let’s connect</div>
-        <div class="contact-card__title">High-leverage architecture, delivered.</div>
-        <div class="contact-card__text">
-          If you’re planning a migration, modernizing a platform, or building AI systems that must perform in production,
-          I can help you design and execute with security and reliability at the core.
-        </div>
+        <div class="contact-card__kicker">{{ t.sections.contact.connect_kicker }}</div>
+        <div class="contact-card__title">{{ t.sections.contact.connect_title }}</div>
+        <div class="contact-card__text">{{ t.sections.contact.connect_text }}</div>
 
         <div class="contact-card__chips" aria-label="What I can help with">
-          <span class="chip">Cloud modernization</span>
-          <span class="chip">Platform reliability</span>
-          <span class="chip">AI systems</span>
-          <span class="chip">Multi-agent orchestration</span>
+          <span class="chip">{{ t.sections.contact.chip_modernization }}</span>
+          <span class="chip">{{ t.sections.contact.chip_reliability }}</span>
+          <span class="chip">{{ t.sections.contact.chip_ai }}</span>
+          <span class="chip">{{ t.sections.contact.chip_agents }}</span>
         </div>
 
         <div class="contact-card__cta">
-          <a class="btn btn--primary" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">Message on LinkedIn</a>
-          <a class="btn btn--ghost" href="#featured">See byCerebro</a>
+          <a class="btn btn--primary" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">{{ t.nav.linkedin }}</a>
+          <a class="btn btn--ghost" href="#featured">{{ t.nav.bycerebro }}</a>
         </div>
       </div>
 
       <div class="contact-card">
-        <div class="contact-card__kicker">Quick links</div>
+        <div class="contact-card__kicker">{{ t.sections.contact.quick_kicker }}</div>
 
         <div class="contact-rows" role="list">
           <div class="contact-row" role="listitem" style="--tone:#60A5FA">
             <div class="contact-row__icon" aria-hidden="true"><svg class="i"><use href="#i-linkedin"></use></svg></div>
             <div class="contact-row__main">
               <div class="contact-row__label">LinkedIn</div>
-              <div class="contact-row__hint">Fastest way to reach me</div>
+              <div class="contact-row__hint">{{ t.sections.contact.linkedin_hint }}</div>
             </div>
             <div class="contact-row__actions">
-              <a class="btn btn--small btn--ghost" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">Open</a>
+              <a class="btn btn--small btn--ghost" href="{{ p.links.linkedin.url }}" rel="me noopener" target="_blank">{{ t.sections.contact.open }}</a>
               <button class="icon-btn icon-btn--small copy-btn" type="button" data-copy-text="{{ p.links.linkedin.url }}" aria-label="Copy LinkedIn link" title="Copy link">
                 <span class="icon-btn__glyph" aria-hidden="true"><svg class="i"><use href="#i-copy"></use></svg></span>
               </button>
@@ -466,13 +538,15 @@ layout: default
           </div>
 
           <div class="contact-row" role="listitem" style="--tone:#22D3EE">
-            <div class="contact-row__icon" aria-hidden="true"><svg class="i"><use href="#i-link"></use></svg></div>
+            <div class="contact-row__icon contact-row__icon--logo" aria-hidden="true">
+              <img class="contact-row__img" src="{{ p.media.bycerebro_logo | relative_url }}" alt="" loading="lazy" decoding="async" />
+            </div>
             <div class="contact-row__main">
               <div class="contact-row__label">{{ p.links.website.label }}</div>
-              <div class="contact-row__hint">Product & platform</div>
+              <div class="contact-row__hint">{{ t.sections.contact.bycerebro_hint }}</div>
             </div>
             <div class="contact-row__actions">
-              <a class="btn btn--small btn--ghost" href="{{ p.links.website.url }}" rel="me noopener" target="_blank">Open</a>
+              <a class="btn btn--small btn--ghost" href="{{ p.links.website.url }}" rel="me noopener" target="_blank">{{ t.sections.contact.open }}</a>
               <button class="icon-btn icon-btn--small copy-btn" type="button" data-copy-text="{{ p.links.website.url }}" aria-label="Copy website link" title="Copy link">
                 <span class="icon-btn__glyph" aria-hidden="true"><svg class="i"><use href="#i-copy"></use></svg></span>
               </button>
@@ -483,10 +557,10 @@ layout: default
             <div class="contact-row__icon" aria-hidden="true"><svg class="i"><use href="#i-github"></use></svg></div>
             <div class="contact-row__main">
               <div class="contact-row__label">GitHub</div>
-              <div class="contact-row__hint">Open-source & engineering</div>
+              <div class="contact-row__hint">{{ t.sections.contact.github_hint }}</div>
             </div>
             <div class="contact-row__actions">
-              <a class="btn btn--small btn--ghost" href="{{ p.links.github.url }}" rel="me noopener" target="_blank">Open</a>
+              <a class="btn btn--small btn--ghost" href="{{ p.links.github.url }}" rel="me noopener" target="_blank">{{ t.sections.contact.open }}</a>
               <button class="icon-btn icon-btn--small copy-btn" type="button" data-copy-text="{{ p.links.github.url }}" aria-label="Copy GitHub link" title="Copy link">
                 <span class="icon-btn__glyph" aria-hidden="true"><svg class="i"><use href="#i-copy"></use></svg></span>
               </button>

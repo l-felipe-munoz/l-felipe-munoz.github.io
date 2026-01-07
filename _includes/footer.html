@@ -1,4 +1,5 @@
-{% assign p = site.data.profile %}
+{% assign lang = page.lang | default: site.lang | default: 'es' %}
+{% assign p = site.data.profiles[lang] %}
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__left">

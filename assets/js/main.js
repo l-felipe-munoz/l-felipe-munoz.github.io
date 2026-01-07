@@ -17,10 +17,17 @@
     try {
       localStorage.setItem("theme", t);
     } catch (e) {}
+    if (btn) {
+      // aria-pressed = "dark mode enabled"
+      btn.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
+      const thumbIcon = btn.querySelector(".theme-switch__thumb-icon use");
+      if (thumbIcon) thumbIcon.setAttribute("href", t === "dark" ? "#i-moon" : "#i-sun");
+    }
   };
 
   // Initialize if not set by inline head script
   if (!root.dataset.theme) setTheme(getPreferred());
+  else setTheme(root.dataset.theme);
 
   if (btn) {
     btn.addEventListener("click", () => {
@@ -64,6 +71,22 @@
       if (!ok) return;
       el.setAttribute("data-copied", "true");
       window.setTimeout(() => el.removeAttribute("data-copied"), 1200);
+    });
+  });
+
+  // Language switch: preserve current hash (section) when switching between / and /en/
+  const langLinks = document.querySelectorAll("[data-lang-switch]");
+  langLinks.forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+      const hash = window.location.hash || "";
+      if (!hash) return;
+      // only adjust when navigating to root/en roots
+      if (href === "/" || href === "/en/" || href.endsWith("/en/") || href.endsWith("/")) {
+        e.preventDefault();
+        window.location.href = href + hash;
+      }
     });
   });
 })();

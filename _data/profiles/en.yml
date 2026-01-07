@@ -120,7 +120,6 @@ relevant_experience:
   - Migration of <strong>600+ servers</strong> (private sector)
   - Modernization of mission-critical platforms on GCP
   - Leadership of distributed IT teams across the Americas
-  - AI-driven solutions for ministries and government entities
   - Architecture design with a strong focus on <strong>security, cost efficiency, and scalability</strong>
 
 clients:
@@ -166,3 +165,5 @@ platzi_course:
     Creator of Platzi’s official course to prepare for and certify as a <strong>Google Associate Cloud Engineer</strong>.
   url: https://platzi.com/cursos/google-associate-cloud-engineer-certification/
   thumbnail: /assets/img/platzi-image.png
+
+

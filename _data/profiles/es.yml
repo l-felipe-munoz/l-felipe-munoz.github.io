@@ -11,19 +11,19 @@ highlights:
   - icon: i-spark
     tone: "#A78BFA"
     value: "12+"
-    label: Years building & leading platforms
+    label: Años construyendo y liderando plataformas
   - icon: i-rocket
     tone: "#F59E0B"
     value: "2000+"
-    label: Servers migrated across high-impact programs
+    label: Servidores migrados en programas de alto impacto
   - icon: i-shield
     tone: "#22C55E"
-    value: "Security"
-    label: Production-first & risk-aware delivery
+    value: "Seguridad"
+    label: Entrega en producción con gestión de riesgo
   - icon: i-briefcase
     tone: "#60A5FA"
     value: "100+"
-    label: Clients successfully delivered (enterprise-grade)
+    label: Clientes atendidos con entrega enterprise
   - icon_img: /assets/img/gcp-icon.svg
     value: "First"
     label: Google Cloud Certified – Professional Cloud Architect (Latin America)
@@ -43,41 +43,41 @@ links:
     url: https://github.com/l-felipe-munoz
 
 about: >
-  Hi, I’m <strong>Felipe Muñoz</strong> — cloud solutions architect and technology leader with
-  <strong>12+ years of experience</strong> designing, migrating, and operating mission-critical platforms on
-  <strong>Google Cloud</strong> for public and private sectors across Latin America.
+  Hola, soy <strong>Felipe Muñoz</strong> — arquitecto de soluciones cloud y líder tecnológico con
+  <strong>12+ años de experiencia</strong> diseñando, migrando y operando plataformas críticas en
+  <strong>Google Cloud</strong> para el sector público y privado en América Latina.
 
-  I’ve led <strong>large-scale infrastructure migrations</strong>, built <strong>data and AI platforms</strong>,
-  and I’m currently building <strong>byCerebro</strong>, a SaaS platform for <strong>AI agent orchestration</strong>
-  focused on automating real, high-impact business processes.
+  He liderado <strong>migraciones de infraestructura a gran escala</strong>, construido <strong>plataformas de datos e IA</strong>,
+  y actualmente estoy construyendo <strong>byCerebro</strong>, una plataforma SaaS de <strong>orquestación de agentes de IA</strong>
+  enfocada en automatizar procesos reales de alto impacto.
 
 beliefs:
-  - Cloud is not infrastructure — it’s <strong>execution capability</strong>
-  - AI is not a model — it’s a <strong>living system</strong>
-  - Architecture should serve the business, not the other way around
-  - Automation is a <strong>competitive advantage</strong>, not a luxury
+  - Cloud no es infraestructura — es <strong>capacidad de ejecución</strong>
+  - La IA no es un modelo — es un <strong>sistema vivo</strong>
+  - La arquitectura debe servir al negocio, no al revés
+  - La automatización es una <strong>ventaja competitiva</strong>, no un lujo
 
 what_i_build:
-  - Secure, scalable <strong>cloud-native platforms</strong>
-  - <strong>Production-grade AI systems</strong> (not demos)
-  - <strong>Multi-agent</strong> and event-driven architectures
-  - Infrastructure as Code ready for real-world operations
-  - Solutions for <strong>government, banking, retail, and healthcare</strong>
+  - Plataformas <strong>cloud-native</strong> seguras y escalables
+  - Sistemas de IA <strong>en producción</strong> (no demos)
+  - Arquitecturas <strong>multi‑agente</strong> y event‑driven
+  - Infraestructura como Código lista para operaciones reales
+  - Soluciones para <strong>gobierno, banca, retail y salud</strong>
 
 featured_project:
   name: byCerebro
   summary: >
-    <strong>byCerebro</strong> is a next-generation SaaS platform focused on AI agent orchestration and end-to-end
-    business process automation, with seamless integration into cloud ecosystems and enterprise APIs.
+    <strong>byCerebro</strong> es una plataforma SaaS enfocada en orquestación de agentes de IA y automatización
+    end‑to‑end de procesos de negocio, con integración a ecosistemas cloud y APIs enterprise.
   bullets:
-    - AI agent orchestration
-    - End-to-end business process automation
-    - Seamless integration with cloud ecosystems and enterprise APIs
+    - Orquestación de agentes de IA
+    - Automatización end‑to‑end de procesos de negocio
+    - Integración con ecosistemas cloud y APIs enterprise
   built_on:
     - Google Cloud Agent Development Kit (ADK)
     - Vertex AI Agent Engine
-    - Secure, scalable, multi-tenant architecture
-  note: From innovation award–winning prototype to a growing commercial product.
+    - Arquitectura multi‑tenant segura y escalable
+  note: De prototipo premiado a producto comercial en crecimiento.
 
 stack:
   "Cloud & Infrastructure":
@@ -116,12 +116,11 @@ stack:
     - Observability & FinOps
 
 relevant_experience:
-  - Migration of <strong>450+ servers</strong> (public sector)
-  - Migration of <strong>600+ servers</strong> (private sector)
-  - Modernization of mission-critical platforms on GCP
-  - Leadership of distributed IT teams across the Americas
-  - AI-driven solutions for ministries and government entities
-  - Architecture design with a strong focus on <strong>security, cost efficiency, and scalability</strong>
+  - Migración de <strong>450+ servidores</strong> (sector público)
+  - Migración de <strong>600+ servidores</strong> (sector privado)
+  - Modernización de plataformas críticas en GCP
+  - Liderazgo de equipos distribuidos de TI en América
+  - Diseño con foco en <strong>seguridad, eficiencia de costos y escalabilidad</strong>
 
 clients:
   - name: Banco Davivienda
@@ -134,10 +133,10 @@ clients:
     detail: Migration of the full application platform to the cloud
 
 beyond_engineering:
-  - <strong>Google Cloud</strong> speaker and instructor
-  - Certification-focused technical trainer
-  - Technical mentor and senior team leader
-  - Product builder — <strong>not just a consultant</strong>
+  - Speaker e instructor de <strong>Google Cloud</strong>
+  - Entrenador técnico orientado a certificaciones
+  - Mentor técnico y líder senior
+  - Product builder — <strong>no solo consultor</strong>
 
 impact:
   - Government and public sector
@@ -163,6 +162,8 @@ certifications:
 platzi_course:
   title: Google Associate Cloud Engineer Certification (Platzi)
   claim: >
-    Creator of Platzi’s official course to prepare for and certify as a <strong>Google Associate Cloud Engineer</strong>.
+    Creador del curso oficial en Platzi para prepararse y certificarse como <strong>Google Associate Cloud Engineer</strong>.
   url: https://platzi.com/cursos/google-associate-cloud-engineer-certification/
   thumbnail: /assets/img/platzi-image.png
+
+

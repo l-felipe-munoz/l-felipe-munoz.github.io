@@ -1,0 +1,94 @@
+nav:
+  about: Sobre mí
+  bycerebro: byCerebro
+  stack: Stack
+  certifications: Certificaciones
+  platzi: Platzi
+  experience: Experiencia
+  clients: Clientes
+  contact: Contacto
+  linkedin: LinkedIn
+  lang_es: ES
+  lang_en: EN
+
+hero:
+  lead: >
+    Arquitecto Cloud y líder tecnológico construyendo plataformas de nivel producción en Google Cloud y
+    orquestación de agentes de IA para resultados reales de negocio.
+  cta_featured: "Destacado: %{project}"
+  cta_contact: Contacto
+
+sections:
+  about:
+    title: Sobre mí
+    subtitle: Mentalidad builder. Producción primero. Arquitectura alineada al negocio.
+    beliefs_title: En lo que creo
+  build:
+    title: Lo que construyo
+    subtitle: Sistemas que escalan, resisten presión y entregan valor.
+    visual_kicker: Ejecución, no presentaciones
+    visual_title: De arquitectura a resultados.
+    visual_text: >
+      Plataformas cloud-native, sistemas de IA y orquestación multi-agente diseñados para producción:
+      seguridad, confiabilidad y disciplina de costos incorporadas.
+    flow_design: Diseñar
+    flow_build: Construir
+    flow_operate: Operar
+    badge_security: Seguridad
+    badge_production: Nivel producción
+    badge_cost: Eficiencia de costos
+    badge_automation: Automatización
+  featured:
+    title: "Proyecto destacado: %{project}"
+    subtitle: Orquestación de agentes de IA para automatización end‑to‑end.
+    built_on: Construido sobre
+  stack:
+    title: Stack tecnológico
+    subtitle: Cloud, datos, IA y operaciones — de punta a punta.
+  certifications:
+    title: Certificaciones
+    subtitle: Credenciales que respaldan ejecución y entrega en producción.
+    meta: Credenciales verificadas
+  platzi:
+    cta_view: Ver curso
+    cta_work: Trabaja conmigo
+  experience:
+    title: Experiencia relevante
+    subtitle: Migraciones a gran escala, modernización, seguridad y eficiencia de costos.
+    beyond: Más allá de la ingeniería
+  clients:
+    title: Clientes enterprise seleccionados
+    subtitle: Proyectos de alto impacto en gobierno y empresa.
+  impact:
+    title: Impacto
+    subtitle: Entrega hands-on para organizaciones que no pueden permitirse caídas.
+    visual_title: Sectores atendidos
+    visual_text: >
+      Entrega probada en entornos regulados y de alta disponibilidad — con seguridad, observabilidad
+      y excelencia operacional incorporadas.
+    badge_security: Seguridad
+    badge_reliability: Confiabilidad
+    badge_cost: Eficiencia de costos
+    badge_automation: Automatización
+  contact:
+    title: Contacto
+    subtitle: Construyamos algo resiliente, seguro y de alto apalancamiento.
+    connect_kicker: Conversemos
+    connect_title: Arquitectura de alto impacto, entregada.
+    connect_text: >
+      Si estás planificando una migración, modernizando una plataforma, o construyendo sistemas de IA que deben rendir
+      en producción, puedo ayudarte a diseñar y ejecutar con seguridad y confiabilidad en el centro.
+    chip_modernization: Modernización cloud
+    chip_reliability: Confiabilidad de plataforma
+    chip_ai: Sistemas de IA
+    chip_agents: Orquestación multi‑agente
+    quick_kicker: Enlaces rápidos
+    linkedin_hint: La forma más rápida de contactarme
+    bycerebro_hint: Producto y plataforma
+    github_hint: Open source e ingeniería
+    open: Abrir
+
+copy:
+  copy: Copiar
+  copied: Copiado
+
