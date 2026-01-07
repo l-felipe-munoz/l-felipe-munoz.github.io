@@ -2,6 +2,17 @@
   const root = document.documentElement;
   const btn = document.querySelector("[data-theme-toggle]");
 
+  const applyThemedImages = (t) => {
+    const themedImgs = document.querySelectorAll("[data-theme-src-light][data-theme-src-dark]");
+    themedImgs.forEach((img) => {
+      const light = img.getAttribute("data-theme-src-light");
+      const dark = img.getAttribute("data-theme-src-dark");
+      // Light theme => dark logo (aws.svg). Dark theme => white logo (aws-white-icon.svg).
+      const nextSrc = t === "dark" ? dark : light;
+      if (nextSrc && img.getAttribute("src") !== nextSrc) img.setAttribute("src", nextSrc);
+    });
+  };
+
   const getPreferred = () => {
     try {
       const stored = localStorage.getItem("theme");
@@ -23,11 +34,16 @@
       const thumbIcon = btn.querySelector(".theme-switch__thumb-icon use");
       if (thumbIcon) thumbIcon.setAttribute("href", t === "dark" ? "#i-moon" : "#i-sun");
     }
+    // Swap theme-aware images (e.g., AWS logo)
+    applyThemedImages(t);
   };
 
   // Initialize if not set by inline head script
   if (!root.dataset.theme) setTheme(getPreferred());
   else setTheme(root.dataset.theme);
+
+  // Ensure themed images are correct even if this script runs before main content is parsed.
+  window.addEventListener("DOMContentLoaded", () => applyThemedImages(root.dataset.theme || getPreferred()));
 
   if (btn) {
     btn.addEventListener("click", () => {

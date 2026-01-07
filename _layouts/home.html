@@ -314,22 +314,41 @@ layout: default
       <p class="muted">{{ t.sections.certifications.subtitle }}</p>
     </div>
 
-    <div class="cert-grid">
-      {% for vendor in p.certifications %}
-        {% assign vendor_name = vendor[0] %}
-        {% assign vendor_logo = '' %}
-        {% if vendor_name contains 'GitLab' %}
-          {% assign vendor_logo = '/assets/img/gitlab.svg' %}
-        {% elsif vendor_name contains 'Google' %}
-          {% assign vendor_logo = '/assets/img/gcp-icon.svg' %}
-        {% endif %}
+    {% assign left_html = '' %}
+    {% assign right_html = '' %}
 
+    {% for vendor in p.certifications %}
+      {% assign vendor_name = vendor[0] %}
+      {% assign vendor_logo = '' %}
+      {% assign vendor_logo_dark = '' %}
+      {% if vendor_name contains 'GitLab' %}
+        {% assign vendor_logo = '/assets/img/gitlab.svg' %}
+      {% elsif vendor_name contains 'Google' %}
+        {% assign vendor_logo = '/assets/img/gcp-icon.svg' %}
+      {% elsif vendor_name contains 'AWS' %}
+        {% assign vendor_logo = '/assets/img/aws.svg' %}
+        {% assign vendor_logo_dark = '/assets/img/aws-white-icon.svg' %}
+      {% endif %}
+
+      {% capture card_html %}
         <div class="cert-card">
           <div class="cert-card__head">
             <div class="cert-card__brand">
               {% if vendor_logo != '' %}
-                <span class="cert-logo" aria-hidden="true">
-                  <img class="cert-logo__img" src="{{ vendor_logo | relative_url }}" alt="" loading="lazy" decoding="async" />
+                <span class="cert-logo{% if vendor_logo_dark != '' %} cert-logo--aws{% endif %}" aria-hidden="true">
+                  {% if vendor_logo_dark != '' %}
+                    <img
+                      class="cert-logo__img"
+                      src="{{ vendor_logo | relative_url }}"
+                      data-theme-src-light="{{ vendor_logo | relative_url }}"
+                      data-theme-src-dark="{{ vendor_logo_dark | relative_url }}"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  {% else %}
+                    <img class="cert-logo__img" src="{{ vendor_logo | relative_url }}" alt="" loading="lazy" decoding="async" />
+                  {% endif %}
                 </span>
               {% endif %}
               <div class="cert-card__vendor">{{ vendor_name }}</div>
@@ -349,7 +368,22 @@ layout: default
             {% endfor %}
           </div>
         </div>
-      {% endfor %}
+      {% endcapture %}
+
+      {% if vendor_name contains 'Google' %}
+        {% capture right_html %}{{ right_html }}{{ card_html }}{% endcapture %}
+      {% else %}
+        {% capture left_html %}{{ left_html }}{{ card_html }}{% endcapture %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="cert-grid cert-grid--cols">
+      <div class="cert-col">
+        {{ left_html }}
+      </div>
+      <div class="cert-col">
+        {{ right_html }}
+      </div>
     </div>
   </div>
 </section>

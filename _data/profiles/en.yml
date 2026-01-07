@@ -158,6 +158,8 @@ certifications:
     - name: Professional Cloud DevOps Engineer Certification
     - name: Professional Cloud Network Engineer Certification
     - name: Professional Cloud Security Engineer Certification
+  AWS:
+    - name: AWS Certified DevOps Engineer – Professional
 
 platzi_course:
   title: Google Associate Cloud Engineer Certification (Platzi)

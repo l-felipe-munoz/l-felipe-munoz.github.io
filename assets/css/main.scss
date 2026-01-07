@@ -907,6 +907,17 @@ html[lang="es"] .copy-btn[data-copied="true"]::after { content: "Copiado"; }
   gap: 14px;
   grid-template-columns: 1fr;
 }
+.cert-grid--cols {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cert-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
 .cert-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -930,9 +941,17 @@ html[lang="es"] .copy-btn[data-copied="true"]::after { content: "Copiado"; }
   background: rgba(255,255,255,0.03);
   display: grid;
   place-items: center;
+  overflow: hidden;
   flex: 0 0 auto;
 }
-.cert-logo__img { width: 22px; height: 22px; display: block; }
+.cert-logo__img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* AWS mark has lots of whitespace in its viewBox — scale a bit for better presence */
+.cert-logo--aws .cert-logo__img { transform: scale(1.22); transform-origin: 50% 50%; }
 .cert-card__vendor { font-weight: 900; letter-spacing: -0.01em; }
 .cert-cloud {
   margin-top: 12px;
@@ -1264,7 +1283,9 @@ html[data-theme="light"] .feature__icon { color: rgba(10, 16, 32, 0.9); }
   .stack-grid { grid-template-columns: 1fr 1fr; }
   .impact-grid { grid-template-columns: 1.05fr 0.95fr; align-items: start; }
   .contact-grid { grid-template-columns: 1.05fr 0.95fr; align-items: start; }
-  .cert-grid { grid-template-columns: 0.45fr 0.55fr; align-items: start; }
+  .cert-grid--cols { flex-direction: row; align-items: flex-start; }
+  .cert-grid--cols .cert-col:first-child { flex: 0 0 45%; }
+  .cert-grid--cols .cert-col:last-child { flex: 0 0 55%; }
   .platzi-card { grid-template-columns: 0.48fr 0.52fr; align-items: center; }
   .footer__inner { flex-direction: row; justify-content: space-between; align-items: center; }
 }
