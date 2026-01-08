@@ -42,6 +42,20 @@ links:
     label: GitHub
     url: https://github.com/l-felipe-munoz
 
+languages:
+  - name: Spanish
+    level: 100
+    label: Native
+    tone: "#A78BFA"
+  - name: English
+    level: 70
+    label: Professional
+    tone: "#12D6DF"
+  - name: Portuguese
+    level: 30
+    label: Basic
+    tone: "#F59E0B"
+
 about: >
   Hi, I’m <strong>Felipe Muñoz</strong> — cloud solutions architect and technology leader with
   <strong>12+ years of experience</strong> designing, migrating, and operating mission-critical platforms on

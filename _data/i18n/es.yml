@@ -49,6 +49,9 @@ sections:
     title: Certificaciones
     subtitle: Credenciales que respaldan ejecución y entrega en producción.
     meta: Credenciales verificadas
+  languages:
+    title: Idiomas
+    subtitle: Fluidez para trabajo técnico, liderazgo y comunicación con stakeholders.
   platzi:
     cta_view: Ver curso
     cta_work: Trabaja conmigo

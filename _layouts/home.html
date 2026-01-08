@@ -447,7 +447,38 @@ layout: default
   </div>
 </section>
 
-<section id="clients" class="section section--alt">
+<section id="languages" class="section section--alt">
+  <div class="container">
+    <div class="section__head">
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-spark"></use></svg></span>
+        {{ t.sections.languages.title }}
+      </h2>
+      <p class="muted">{{ t.sections.languages.subtitle }}</p>
+    </div>
+
+    <div class="lang-grid" aria-label="{{ t.sections.languages.title }}">
+      {% for l in p.languages %}
+        {% assign tone = l.tone | default: '#A78BFA' %}
+        <div class="lang-card" style="--p: {{ l.level }}; --tone: {{ tone }};">
+          <div class="lang-card__dial" role="img" aria-label="{{ l.name }} {{ l.level }}%">
+            <div class="lang-card__center" aria-hidden="true">
+              <div class="lang-card__value">{{ l.level }}%</div>
+            </div>
+          </div>
+          <div class="lang-card__meta">
+            <div class="lang-card__name">{{ l.name }}</div>
+            {% if l.label %}
+              <div class="lang-card__label">{{ l.label }}</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="clients" class="section">
   <div class="container">
     <div class="section__head">
       <h2>

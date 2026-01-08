@@ -49,6 +49,9 @@ sections:
     title: Certifications
     subtitle: Credentials that back execution and production delivery.
     meta: Verified credentials
+  languages:
+    title: Languages
+    subtitle: Fluency for technical work, leadership, and stakeholder communication.
   platzi:
     cta_view: View course
     cta_work: Work with me
