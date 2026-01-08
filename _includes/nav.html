@@ -1,4 +1,4 @@
-{% assign lang = page.lang | default: site.lang | default: 'es' %}
+{% assign lang = page.lang | default: site.lang | default: 'en' %}
 {% assign t = site.data.i18n[lang] %}
 {% assign p = site.data.profiles[lang] %}
 <nav class="nav" aria-label="Primary">
@@ -16,12 +16,12 @@
 
     <div class="nav__actions">
       <div class="lang-switch" aria-label="Language switch">
-        {% if lang == 'en' %}
-          <a class="lang-pill" href="{{ '/' | relative_url }}" data-lang-switch="es">{{ t.nav.lang_es }}</a>
-          <a class="lang-pill lang-pill--active" href="{{ '/en/' | relative_url }}" data-lang-switch="en">{{ t.nav.lang_en }}</a>
+        {% if lang == 'es' %}
+          <a class="lang-pill lang-pill--active" href="{{ '/es/' | relative_url }}" data-lang-switch="es">{{ t.nav.lang_es }}</a>
+          <a class="lang-pill" href="{{ '/' | relative_url }}" data-lang-switch="en">{{ t.nav.lang_en }}</a>
         {% else %}
-          <a class="lang-pill lang-pill--active" href="{{ '/' | relative_url }}" data-lang-switch="es">{{ t.nav.lang_es }}</a>
-          <a class="lang-pill" href="{{ '/en/' | relative_url }}" data-lang-switch="en">{{ t.nav.lang_en }}</a>
+          <a class="lang-pill" href="{{ '/es/' | relative_url }}" data-lang-switch="es">{{ t.nav.lang_es }}</a>
+          <a class="lang-pill lang-pill--active" href="{{ '/' | relative_url }}" data-lang-switch="en">{{ t.nav.lang_en }}</a>
         {% endif %}
       </div>
       <button class="theme-switch" type="button" data-theme-toggle aria-label="Toggle theme" aria-pressed="false" title="Toggle theme">
