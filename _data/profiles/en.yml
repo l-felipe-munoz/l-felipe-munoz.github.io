@@ -1,7 +1,7 @@
 name: Felipe Muñoz
-role_line: Cloud Architect · AI & Multi-Agent Systems Builder · Tech Leader
-location: Latin America
-years_experience: "12+"
+role_line: Director of AI Transformation · Cloud Architecture · Enterprise AI Automation
+location: Medellín, Colombia
+years_experience: "16+"
 
 media:
   profile_photo: /assets/img/userphoto.jpg
@@ -10,20 +10,20 @@ media:
 highlights:
   - icon: i-spark
     tone: "#A78BFA"
-    value: "12+"
-    label: Years building & leading platforms
+    value: "16+"
+    label: Years bridging cloud engineering & executive AI strategy
   - icon: i-rocket
     tone: "#F59E0B"
-    value: "2000+"
-    label: Servers migrated across high-impact programs
+    value: "$370K+"
+    label: Annual savings delivered via AI automation (and growing)
   - icon: i-shield
     tone: "#22C55E"
     value: "Security"
-    label: Production-first & risk-aware delivery
+    label: Production-first, Zero Trust & risk-aware delivery
   - icon: i-briefcase
     tone: "#60A5FA"
-    value: "100+"
-    label: Clients successfully delivered (enterprise-grade)
+    value: "30+"
+    label: Enterprise cloud projects delivered across Latin America
   - icon_img: /assets/img/gcp-icon.svg
     value: "First"
     label: Google Cloud Certified – Professional Cloud Architect (Latin America)
@@ -57,110 +57,182 @@ languages:
     tone: "#F59E0B"
 
 about: >
-  Hi, I’m <strong>Felipe Muñoz</strong> — cloud solutions architect and technology leader with
-  <strong>12+ years of experience</strong> designing, migrating, and operating mission-critical platforms on
-  <strong>Google Cloud</strong> for public and private sectors across Latin America.
+  Hi, I'm <strong>Felipe Muñoz</strong> — a visionary technology leader with <strong>16+ years</strong>
+  bridging deep cloud engineering and executive AI strategy. Among the first
+  <strong>Google Cloud Certified Professional Cloud Architects</strong> in Latin America, holding six GCP
+  professional certifications, and a hands-on builder of enterprise AI systems using
+  <strong>Vertex AI, Claude (Anthropic), Gemini</strong>, and multi-agent frameworks.
 
-  I’ve led <strong>large-scale infrastructure migrations</strong>, built <strong>data and AI platforms</strong>,
-  and I’m currently building <strong>byCerebro</strong>, a SaaS platform for <strong>AI agent orchestration</strong>
-  focused on automating real, high-impact business processes.
+  Founder of <strong>byCerebro</strong> — a production-grade agentic AI platform — and recognized for
+  converting raw AI ideas into deployed enterprise applications at record speed. I operate end-to-end across
+  infrastructure, DevSecOps, full-stack development, UI/UX, AI automation, and C-suite communication,
+  making me the definitive bridge between <strong>disruptive AI potential and scalable business reality</strong>.
 
 beliefs:
-  - Cloud is not infrastructure — it’s <strong>execution capability</strong>
-  - AI is not a model — it’s a <strong>living system</strong>
-  - Architecture should serve the business, not the other way around
-  - Automation is a <strong>competitive advantage</strong>, not a luxury
+  - AI is not a model — it's a <strong>living, deployed system</strong>
+  - Cloud is not infrastructure — it's <strong>execution capability</strong>
+  - The best architecture serves the business, <strong>not the other way around</strong>
+  - Speed to production is a <strong>competitive moat</strong>
+  - Security and automation are <strong>non-negotiable defaults</strong>
 
 what_i_build:
-  - Secure, scalable <strong>cloud-native platforms</strong>
-  - <strong>Production-grade AI systems</strong> (not demos)
-  - <strong>Multi-agent</strong> and event-driven architectures
-  - Infrastructure as Code ready for real-world operations
-  - Solutions for <strong>government, banking, retail, and healthcare</strong>
+  - <strong>Enterprise AI platforms</strong> from concept to production in days, not months
+  - <strong>Multi-agent architectures</strong> with Claude, Gemini, Vertex AI, and MCP
+  - Secure, scalable <strong>cloud-native platforms</strong> on GCP, AWS, and Azure
+  - <strong>Full-stack applications</strong> — backend, frontend, and AI-driven UX
+  - <strong>DevSecOps pipelines</strong> and Zero Trust security postures
+  - Executive-grade <strong>data visualization and reporting platforms</strong>
 
-featured_project:
-  name: byCerebro
-  summary: >
-    <strong>byCerebro</strong> is a next-generation SaaS platform focused on AI agent orchestration and end-to-end
-    business process automation, with seamless integration into cloud ecosystems and enterprise APIs.
-  bullets:
-    - AI agent orchestration
-    - End-to-end business process automation
-    - Seamless integration with cloud ecosystems and enterprise APIs
-  built_on:
-    - Google Cloud Agent Development Kit (ADK)
-    - Vertex AI Agent Engine
-    - Secure, scalable, multi-tenant architecture
-  note: From innovation award–winning prototype to a growing commercial product.
+now_building:
+  name: Integrated Process Portal — HIL Group
+  logo: /assets/img/servinformacion-logo.png
+  note: Enterprise AI intranet — COP $1.5B in annual savings and growing
+  tags:
+    - Vue.js
+    - Claude AI
+    - Cloud Run
+    - BigQuery
+  link: "#featured"
+
+featured_projects:
+  - name: Integrated Process Portal — HIL Group
+    logo: /assets/img/servinformacion-logo.png
+    summary: >
+      Enterprise AI intranet conceived, architected, and built end-to-end for <strong>HIL Group</strong> —
+      restructuring and automating legacy processes across all vice-presidencies: Accounting, Commercial,
+      Technical Support, PMO, and Human Resources. Fully functional, secure, scalable modules shipped at
+      an average pace of <strong>5 business days per module</strong>.
+    bullets:
+      - Average of 5 business days from concept to production per module
+      - COP $1,500M (~USD 370K) in annual savings — and growing
+      - Cross-area interoperability and centralized organizational data
+    built_on:
+      - Vue.js · Cloud Run · BigQuery
+      - Claude (Anthropic) · Vertex AI
+      - AI agents for intelligent process automation
+    note: One of the highest-ROI internal technology initiatives in the HIL Group's history.
+    link: https://servicios.hil.com.co
+
+  - name: byCerebro
+    logo: /assets/img/bycerebro.svg
+    summary: >
+      <strong>byCerebro</strong> is a production-grade agentic AI platform designed for enterprise automation —
+      integrating Google Agent Engine, AWS Bedrock, and Azure Copilot in a unified multi-cloud AI fabric.
+      One of the most competitive enterprise AI platforms in the Latin American market.
+    bullets:
+      - Multi-cloud AI orchestration (Google, AWS, Azure)
+      - End-to-end enterprise process automation
+      - Modules from concept to production in ~5 business days
+    built_on:
+      - Google Cloud Agent Development Kit (ADK) · Vertex AI Agent Engine
+      - AWS Bedrock · Azure Copilot Studio
+      - Vue.js · Cloud Run · BigQuery · Claude (Anthropic)
+    note: From innovation award–winning prototype to a growing commercial product.
+    link: https://bycerebro.com
 
 stack:
-  "Cloud & Infrastructure":
-    - Google Cloud Platform (GCP) · Cloud Run · API Gateway · Apigee
-    - Kubernetes (GKE Autopilot) · Anthos Service Mesh / Istio
-    - Load Balancing · Cloud Armor · Identity-Aware Proxy (IAP)
-    - IAM · Organization Policy · Secret Manager
-    - Terraform · Infrastructure Manager
-  Security:
-    - Security Command Center · Event Threat Detection
-    - Cloud KMS · Key management
-    - VPC Service Controls · Data Loss Prevention (DLP)
-    - Cloud Audit Logs · Access Transparency
-    - Artifact Registry (scanning) · Binary Authorization
-  "Enterprise Cloud Architecture Design":
-    - Hub-and-Spoke networking · Shared VPC
-    - Cloud Interconnect · Cloud VPN · Cloud Router
-    - Landing zones · Multi-project org design
-    - Network segmentation · DNS design
-    - Resiliency patterns · DR / HA
-  "Data & Analytics":
-    - BigQuery · Dataplex · Dataform
-    - Pub/Sub · Dataflow · Cloud Composer
-    - Firestore · Cloud SQL · AlloyDB
-    - Cloud Storage · Datastream · Bigtable
-    - Looker · Governance · Data quality
   "AI & Automation":
-    - Vertex AI · Gemini
-    - Agent Development Kit (ADK)
-    - Multi-agent systems
+    - Vertex AI · Gemini 3.1 Pro · Claude (Anthropic) · OpenAI
+    - Google Agent Development Kit (ADK) · Multi-agent systems · MCP
+    - n8n · Make · byCerebro · Prompt Engineering · RAG
     - NLP, classification, scoring, and document automation
-  "Dev & Ops":
-    - GitHub · GitHub Actions · Cloud Build
-    - GitLab CI · Jenkins · Supply-chain security
-    - CI/CD · DevSecOps · Policy as Code
-    - Observability & FinOps
+  "AI Dev Tools":
+    - Cursor · GitHub Copilot · Google AI Studio
+    - Claude Projects & Skills · AI-assisted full-stack development
+  "Cloud Platforms":
+    - Google Cloud Platform ★ (expert) — full professional stack
+    - AWS (proficient) · Azure (proficient) — multi-cloud architecture
+    - Cloud Run · GKE Autopilot · API Gateway · Apigee
+    - IAM · Organization Policy · Secret Manager · Terraform
+  Security:
+    - VPC Service Controls · Cloud Armor · Model Armor · Zero Trust
+    - IAM · OS hardening · SAST/DAST · Shielded VMs · Secret Manager
+    - Security Command Center · Cloud KMS · Binary Authorization
+    - Cloud Audit Logs · Access Transparency
+  "DevSecOps & IaC":
+    - Terraform · Ansible · Kubernetes (GKE) · Docker · ArgoCD
+    - GitLab CI/CD · GitHub Actions · Azure DevOps · Jenkins · Cloud Build
+    - Bitbucket Pipelines · Supply-chain security · Policy as Code
+  "Backend Development":
+    - Python · Node.js · FastAPI · REST / GraphQL APIs
+    - Cloud Run (serverless) · Pub/Sub event-driven architectures
+  "Frontend & UI/UX":
+    - React · Vue.js · Tailwind CSS · Apache ECharts
+    - Design systems · Responsive dashboards · Executive data visualization
+  "Data & Analytics":
+    - BigQuery · Dataplex · Dataform · Cloud SQL · Spanner · AlloyDB
+    - Pub/Sub · Dataflow · Cloud Composer · Firestore · Bigtable
+    - Memorystore (Redis) · Cloud Storage · Datastream · Looker
+  Networking:
+    - Shared VPC · Cloud Interconnect · VPN · Cloud Router · Cloud NAT
+    - Load Balancers · DNS · SD-WAN · Hybrid connectivity
+  Observability:
+    - Cloud Logging & Monitoring · Prometheus · Grafana
+    - OpenTelemetry · SLO/SLI frameworks · FinOps
+  Leadership:
+    - C-suite communication · Pre-sales engineering
+    - Distributed team management (15+ engineers across 6 countries)
+    - Agile · OKR · Delivery frameworks
 
 relevant_experience:
-  - Migration of <strong>450+ servers</strong> (public sector)
-  - Migration of <strong>600+ servers</strong> (private sector)
-  - Modernization of mission-critical platforms on GCP
-  - Leadership of distributed IT teams across the Americas
-  - Architecture design with a strong focus on <strong>security, cost efficiency, and scalability</strong>
+  - Led enterprise AI platform (<strong>servicios.hil.com.co</strong>) generating <strong>COP $1.5B (~USD 370K) in annual savings</strong>
+  - Modernized <strong>HugoApp</strong> (1.3M+ users) to GCP with zero-downtime migration in 6 weeks
+  - Executed migrations of <strong>450+ servers</strong> (Alcaldía de Cali), 200+ servers (Farmatodo), 200+ servers (Colfuturo)
+  - Crisis response: <strong>recovered Altipal's entire platform</strong> from IFX-compromised backups to GCP in 7 days
+  - Led <strong>15+ engineers</strong> across Colombia, Brazil, Peru, Ecuador, El Salvador, and Mexico
+  - Delivered AI architectures for <strong>MinTIC, MinDefensa, Banco Agrario</strong>, and Davivienda
 
 clients:
+  - name: Banco Agrario de Colombia
+    logo: /assets/img/banco-agrario-logo.png
+    logo_bg: white
+    detail: 5-agent AI architecture under Open Finance regulatory framework
+  - name: Ministry of ICT — MinTIC Colombia
+    logo: /assets/img/mintic-logo.png
+    logo_bg: white
+    detail: AI Microcenters for healthcare, education, and risk management
+  - name: Ministry of National Defense — MinDefensa
+    logo: /assets/img/mindefensa-logo.png
+    logo_bg: white
+    detail: Classified, high-availability AI & data platform (VPC-SC, Shielded VMs, CMEK)
   - name: Banco Davivienda
-    detail: Kubernetes, DevSecOps
-  - name: Ministry of National Defense (Colombia)
-    detail: Full Google Cloud implementation for military environments
-  - name: Cali City Hall (Alcaldía de Cali)
-    detail: Migration of the entire datacenter to the cloud
+    logo: /assets/img/davivienda-logo.png
+    logo_bg: white
+    detail: MBaaS infrastructure on GCP — DevSecOps, GKE, API security for millions of users
+  - name: SINCHI (Amazonian Research Institute)
+    logo: /assets/img/sinchi-logo.png
+    detail: AI-led platform migration with zero direct human intervention
+  - name: HIL Group — servicios.hil.com.co
+    logo: /assets/img/servinformacion-logo.png
+    logo_bg: white
+    detail: Enterprise AI intranet — COP $1.5B annual savings and growing
+  - name: Alcaldía de Cali
+    logo: /assets/img/alcaldia-cali-logo.png
+    logo_bg: white
+    detail: 450-server datacenter migration to GCP
   - name: Farmatodo
-    detail: Migration of the full application platform to the cloud
+    logo: /assets/img/farmatodo-logo.png
+    logo_bg: white
+    detail: Migration of the full application platform to GCP
 
 beyond_engineering:
-  - <strong>Google Cloud</strong> speaker and instructor
-  - Certification-focused technical trainer
-  - Technical mentor and senior team leader
-  - Product builder — <strong>not just a consultant</strong>
+  - <strong>Google Cloud</strong> speaker and certified instructor
+  - Founder & product builder — <strong>byCerebro.com</strong>
+  - Creator of Platzi's official <strong>Google Associate Cloud Engineer</strong> course
+  - C-suite technology advisor and pre-sales architect
+  - Technical mentor and distributed team leader (<strong>15+ engineers, 6 countries</strong>)
 
 impact:
   - Government and public sector
   - Banking and financial services
   - Retail and logistics
   - Healthcare and education
+  - Scientific research institutions
 
 quote: |
-  “The best architecture is the one you don’t notice —
-  but it scales, withstands pressure, and delivers value.”
+  "I operate end-to-end across infrastructure, DevSecOps, full-stack development,
+  UI/UX, AI automation, and C-suite communication —
+  making me the definitive bridge between disruptive AI potential and scalable business reality."
 
 certifications:
   GitLab:
@@ -178,8 +250,6 @@ certifications:
 platzi_course:
   title: Google Associate Cloud Engineer Certification (Platzi)
   claim: >
-    Creator of Platzi’s official course to prepare for and certify as a <strong>Google Associate Cloud Engineer</strong>.
+    Creator of Platzi's official course to prepare for and certify as a <strong>Google Associate Cloud Engineer</strong>.
   url: https://platzi.com/cursos/google-associate-cloud-engineer-certification/
   thumbnail: /assets/img/platzi-image.png
-
-

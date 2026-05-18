@@ -422,6 +422,12 @@ html[data-theme="light"] .card { background: linear-gradient(180deg, rgba(10,16,
   background: rgba(255,255,255,0.03);
 }
 html[data-theme="light"] .card__logo { background: rgba(10,16,32,0.03); }
+.card__logo--contain {
+  height: 46px;
+  width: 72px;
+  object-fit: contain;
+  object-position: center;
+}
 .card__text { margin-top: 8px; color: var(--muted); }
 .card__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .card__cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
@@ -469,6 +475,48 @@ html[data-theme="light"] .section--alt {
 html[data-theme="light"] .project-logo {
   background: rgba(10,16,32,0.03);
   box-shadow: 0 18px 60px rgba(10,16,32,0.10);
+}
+.project-logo--sm {
+  height: 36px;
+  padding: 8px 10px;
+}
+.project-logo--contain {
+  width: 64px;
+  object-fit: contain;
+  object-position: center;
+}
+.project-logo--white-bg {
+  background: #ffffff !important;
+}
+
+/* Featured Projects section */
+.featured-project {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+.featured-project:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.featured-project__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.featured-project__title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.featured-project__name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .grid { display: grid; gap: 14px; }
@@ -1224,9 +1272,35 @@ html[data-theme="light"] .panel--strong {
   background: var(--card);
   border-radius: var(--radius);
   padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
+.client__logo-col {
+  flex: 0 0 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client__logo {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  padding: 8px;
+  background: rgba(255,255,255,0.06);
+}
+html[data-theme="light"] .client__logo {
+  background: rgba(10,16,32,0.04);
+}
+.client__logo--white-bg {
+  background: #ffffff !important;
+}
+.client__body { flex: 1; min-width: 0; }
 .client__name { font-weight: 720; letter-spacing: -0.01em; }
-.client__detail { color: var(--muted); margin-top: 6px; }
+.client__detail { color: var(--muted); margin-top: 4px; font-size: 13px; }
 
 .contact { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
 .quote {

@@ -21,11 +21,11 @@ hero:
 sections:
   about:
     title: Sobre mí
-    subtitle: Mentalidad builder. Producción primero. Arquitectura alineada al negocio.
+    subtitle: Mentalidad builder. Alcance ejecutivo. Producción primero. Estrategia IA alineada al negocio.
     beliefs_title: En lo que creo
   build:
     title: Lo que construyo
-    subtitle: Sistemas que escalan, resisten presión y entregan valor.
+    subtitle: Plataformas IA y sistemas cloud que escalan, resisten presión y entregan valor rápido.
     visual_kicker: Ejecución, no presentaciones
     visual_title: De arquitectura a resultados.
     visual_text: >
@@ -39,9 +39,10 @@ sections:
     badge_cost: Eficiencia de costos
     badge_automation: Automatización
   featured:
-    title: "Proyecto destacado: %{project}"
-    subtitle: Orquestación de agentes de IA para automatización end‑to‑end.
+    title: Proyectos destacados
+    subtitle: Plataformas IA en producción construidas para impacto enterprise real.
     built_on: Construido sobre
+    visit: Visitar
   stack:
     title: Stack tecnológico
     subtitle: Cloud, datos, IA y operaciones — de punta a punta.
@@ -57,7 +58,7 @@ sections:
     cta_work: Trabaja conmigo
   experience:
     title: Experiencia relevante
-    subtitle: Migraciones a gran escala, modernización, seguridad y eficiencia de costos.
+    subtitle: Migraciones a gran escala, plataformas lideradas por IA, equipos distribuidos e impacto enterprise.
     beyond: Más allá de la ingeniería
   clients:
     title: Clientes enterprise seleccionados
@@ -75,15 +76,16 @@ sections:
     badge_automation: Automatización
   contact:
     title: Contacto
-    subtitle: Construyamos algo resiliente, seguro y de alto apalancamiento.
+    subtitle: Construyamos algo resiliente, impulsado por IA y de alto apalancamiento.
     connect_kicker: Conversemos
-    connect_title: Arquitectura de alto impacto, entregada.
+    connect_title: IA enterprise, entregada a velocidad.
     connect_text: >
-      Si estás planificando una migración, modernizando una plataforma, o construyendo sistemas de IA que deben rendir
-      en producción, puedo ayudarte a diseñar y ejecutar con seguridad y confiabilidad en el centro.
+      Si estás planificando una migración, modernizando una plataforma, construyendo sistemas IA enterprise,
+      o necesitas un líder tecnológico que hable tanto ingeniería como C-suite — puedo ayudarte a diseñar
+      y ejecutar con velocidad, seguridad y confiabilidad en el centro.
     chip_modernization: Modernización cloud
     chip_reliability: Confiabilidad de plataforma
-    chip_ai: Sistemas de IA
+    chip_ai: IA enterprise
     chip_agents: Orquestación multi‑agente
     quick_kicker: Enlaces rápidos
     linkedin_hint: La forma más rápida de contactarme

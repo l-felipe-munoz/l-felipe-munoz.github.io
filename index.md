@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Felipe Muñoz
-description: Cloud Architect · AI & Multi-Agent Systems Builder · Tech Leader
+description: Director of AI Transformation · Cloud Architecture · Enterprise AI Automation
 lang: en
 ---
 

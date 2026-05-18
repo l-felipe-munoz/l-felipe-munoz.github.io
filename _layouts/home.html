@@ -5,8 +5,8 @@ layout: default
 {% assign lang = page.lang | default: site.lang | default: 'en' %}
 {% assign t = site.data.i18n[lang] %}
 {% assign p = site.data.profiles[lang] %}
-{% assign hero_cta_featured = t.hero.cta_featured | replace: '%{project}', p.featured_project.name %}
-{% assign featured_title = t.sections.featured.title | replace: '%{project}', p.featured_project.name %}
+{% assign hero_cta_featured = t.hero.cta_featured | replace: '%{project}', p.now_building.name %}
+{% assign featured_title = t.sections.featured.title %}
 
 <header class="hero">
   <div class="container hero__inner">
@@ -39,25 +39,23 @@ layout: default
           <div class="card__kicker">Now building</div>
           <div class="card__brand">
             <img
-              class="card__logo"
-              src="{{ p.media.bycerebro_logo | relative_url }}"
-              alt="{{ p.featured_project.name }} logo"
+              class="card__logo card__logo--contain"
+              src="{{ p.now_building.logo | relative_url }}"
+              alt="{{ p.now_building.name }} logo"
               loading="eager"
               decoding="async"
               fetchpriority="high"
             />
-            <div class="card__brand-name">{{ p.featured_project.name }}</div>
+            <div class="card__brand-name">{{ p.now_building.name }}</div>
           </div>
-          <div class="card__text">{{ p.featured_project.note }}</div>
+          <div class="card__text">{{ p.now_building.note }}</div>
           <div class="card__meta">
-            <span class="tag">GCP</span>
-            <span class="tag">Vertex AI</span>
-            <span class="tag">Multi-agent</span>
-            <span class="tag">Security</span>
+            {% for tag in p.now_building.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
           </div>
           <div class="card__cta">
             <a class="btn btn--small btn--primary" href="#featured">Explore</a>
-            <a class="btn btn--small btn--ghost" href="{{ p.links.website.url }}" rel="me noopener" target="_blank">Website</a>
           </div>
         </div>
       </div>
@@ -200,41 +198,54 @@ layout: default
 <section id="featured" class="section">
   <div class="container">
     <div class="section__head">
-      <div class="project-head">
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-rocket"></use></svg></span>
+        {{ featured_title }}
+      </h2>
+      <p class="muted">{{ t.sections.featured.subtitle }}</p>
+    </div>
+
+    {% for proj in p.featured_projects %}
+    <div class="featured-project{% cycle '', ' featured-project--alt' %}">
+      <div class="featured-project__head">
         <img
-          class="project-logo"
-          src="{{ p.media.bycerebro_logo | relative_url }}"
-          alt="{{ p.featured_project.name }} logo"
+          class="project-logo project-logo--sm{% unless proj.logo contains '.svg' %} project-logo--contain project-logo--white-bg{% endunless %}"
+          src="{{ proj.logo | relative_url }}"
+          alt="{{ proj.name }} logo"
           loading="lazy"
           decoding="async"
         />
-        <div class="project-head__text">
-          <h2>{{ featured_title }}</h2>
-          <p class="muted">{{ t.sections.featured.subtitle }}</p>
+        <div class="featured-project__title-wrap">
+          <h3 class="featured-project__name">{{ proj.name }}</h3>
+          {% if proj.link %}
+          <a class="btn btn--small btn--ghost" href="{{ proj.link }}" rel="noopener" target="_blank">{{ t.sections.featured.visit }} →</a>
+          {% endif %}
         </div>
       </div>
-    </div>
-    <div class="grid grid--2">
-      <div class="panel panel--strong">
-        <div class="prose">
-          <p>{{ p.featured_project.summary }}</p>
+      <div class="grid grid--2">
+        <div class="panel panel--strong">
+          <div class="prose">
+            <p>{{ proj.summary }}</p>
+            <ul class="list">
+              {% for b in proj.bullets %}
+              <li>{{ b }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="panel">
+          <h3 class="panel__title">{{ t.sections.featured.built_on }}</h3>
           <ul class="list">
-            {% for b in p.featured_project.bullets %}
+            {% for b in proj.built_on %}
             <li>{{ b }}</li>
             {% endfor %}
           </ul>
+          <p class="muted small">{{ proj.note }}</p>
         </div>
       </div>
-      <div class="panel">
-        <h3 class="panel__title">{{ t.sections.featured.built_on }}</h3>
-        <ul class="list">
-          {% for b in p.featured_project.built_on %}
-          <li>{{ b }}</li>
-          {% endfor %}
-        </ul>
-        <p class="muted small">{{ p.featured_project.note }}</p>
-      </div>
     </div>
+    {% endfor %}
+
   </div>
 </section>
 
@@ -490,8 +501,15 @@ layout: default
     <div class="grid grid--2">
       {% for c in p.clients %}
       <div class="client">
-        <div class="client__name">{{ c.name }}</div>
-        <div class="client__detail">{{ c.detail }}</div>
+        {% if c.logo %}
+        <div class="client__logo-col">
+          <img class="client__logo{% if c.logo_bg == 'white' %} client__logo--white-bg{% endif %}" src="{{ c.logo | relative_url }}" alt="{{ c.name }}" loading="lazy" decoding="async" />
+        </div>
+        {% endif %}
+        <div class="client__body">
+          <div class="client__name">{{ c.name }}</div>
+          <div class="client__detail">{{ c.detail }}</div>
+        </div>
       </div>
       {% endfor %}
     </div>
