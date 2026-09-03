@@ -160,9 +160,21 @@ certifications:
     - name: Professional Cloud Network Engineer Certification
     - name: Professional Cloud Security Engineer Certification
 
-platzi_course:
-  title: Google Associate Cloud Engineer Certification (Platzi)
-  claim: >
-    Creator of Platzi’s official course to prepare for and certify as a <strong>Google Associate Cloud Engineer</strong>.
-  url: https://platzi.com/cursos/google-associate-cloud-engineer-certification/
-  thumbnail: /assets/img/platzi-image.png
+platzi_courses:
+  - title: Antigravity 2.0 (Platzi)
+    claim: >
+      Creator of Platzi's official course on <strong>Google Antigravity 2.0</strong> — agent-first development,
+      multi-agent orchestration, MCP, CLI, and SDK.
+    url: https://platzi.com/cursos/antigravity/
+    thumbnail: /assets/img/platzi-antigravity.jpg
+  - title: Building Agents with Gemini Enterprise Agent Platform (Platzi)
+    claim: >
+      Creator of Platzi's official course to design, deploy, and operate production agents on
+      <strong>Gemini Enterprise Agent Platform</strong> (formerly Vertex AI).
+    url: https://platzi.com/cursos/agentes-gemini/
+    thumbnail: /assets/img/platzi-agentes-gemini.jpg
+  - title: Google Associate Cloud Engineer Certification (Platzi)
+    claim: >
+      Creator of Platzi’s official course to prepare for and certify as a <strong>Google Associate Cloud Engineer</strong>.
+    url: https://platzi.com/cursos/google-associate-cloud-engineer-certification/
+    thumbnail: /assets/img/platzi-image.png

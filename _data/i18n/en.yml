@@ -54,8 +54,11 @@ sections:
     title: Languages
     subtitle: Fluency for technical work, leadership, and stakeholder communication.
   platzi:
+    title: Courses I teach
+    subtitle: Official Platzi courses I created — from cloud certification to agent platforms.
     cta_view: View course
     cta_work: Work with me
+    open_course: Open %{course} on Platzi in a new tab
   experience:
     title: Relevant experience
     subtitle: Large‑scale migrations, AI‑led platforms, distributed team leadership & enterprise impact.

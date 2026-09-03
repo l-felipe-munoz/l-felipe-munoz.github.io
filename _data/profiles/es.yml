@@ -218,7 +218,7 @@ clients:
 beyond_engineering:
   - Speaker e instructor certificado de <strong>Google Cloud</strong>
   - Fundador y product builder — <strong>byCerebro.com</strong>
-  - Creador del curso oficial de <strong>Google Associate Cloud Engineer</strong> en Platzi
+  - Creador de los cursos oficiales de <strong>Antigravity</strong>, <strong>Gemini Enterprise Agent Platform</strong> y <strong>Google Associate Cloud Engineer</strong> en Platzi
   - Asesor tecnológico para C-suite y arquitecto de pre-sales
   - Mentor técnico y líder de equipos distribuidos (<strong>15+ ingenieros, 6 países</strong>)
 
@@ -247,9 +247,21 @@ certifications:
   AWS:
     - name: AWS Certified DevOps Engineer – Professional
 
-platzi_course:
-  title: Google Associate Cloud Engineer Certification (Platzi)
-  claim: >
-    Creador del curso oficial en Platzi para prepararse y certificarse como <strong>Google Associate Cloud Engineer</strong>.
-  url: https://platzi.com/cursos/google-associate-cloud-engineer-certification/
-  thumbnail: /assets/img/platzi-image.png
+platzi_courses:
+  - title: Antigravity 2.0 (Platzi)
+    claim: >
+      Creador del curso oficial en Platzi sobre <strong>Google Antigravity 2.0</strong> — desarrollo agent-first,
+      orquestación multi-agente, MCP, CLI y SDK.
+    url: https://platzi.com/cursos/antigravity/
+    thumbnail: /assets/img/platzi-antigravity.jpg
+  - title: Agentes en Gemini Enterprise Agent Platform (Platzi)
+    claim: >
+      Creador del curso oficial en Platzi para diseñar, desplegar y operar agentes en producción en
+      <strong>Gemini Enterprise Agent Platform</strong> (antes Vertex AI).
+    url: https://platzi.com/cursos/agentes-gemini/
+    thumbnail: /assets/img/platzi-agentes-gemini.jpg
+  - title: Google Associate Cloud Engineer Certification (Platzi)
+    claim: >
+      Creador del curso oficial en Platzi para prepararse y certificarse como <strong>Google Associate Cloud Engineer</strong>.
+    url: https://platzi.com/cursos/google-associate-cloud-engineer-certification/
+    thumbnail: /assets/img/platzi-image.png

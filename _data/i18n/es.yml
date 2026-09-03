@@ -54,8 +54,11 @@ sections:
     title: Idiomas
     subtitle: Fluidez para trabajo técnico, liderazgo y comunicación con stakeholders.
   platzi:
+    title: Cursos que imparto
+    subtitle: Cursos oficiales de Platzi que creé — de certificación cloud a plataformas de agentes.
     cta_view: Ver curso
     cta_work: Trabaja conmigo
+    open_course: Abrir %{course} en Platzi en una pestaña nueva
   experience:
     title: Experiencia relevante
     subtitle: Migraciones a gran escala, plataformas lideradas por IA, equipos distribuidos e impacto enterprise.

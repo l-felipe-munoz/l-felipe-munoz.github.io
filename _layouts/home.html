@@ -401,30 +401,43 @@ layout: default
 
 <section id="platzi" class="section section--alt">
   <div class="container">
-    <div class="platzi-card" role="region" aria-label="Platzi course">
-      <a class="platzi-card__media platzi-media" href="{{ p.platzi_course.url }}" rel="me noopener" target="_blank" aria-label="Open Platzi course in a new tab">
-        <img class="platzi-thumb" src="{{ p.platzi_course.thumbnail | relative_url }}" alt="" loading="lazy" decoding="async" />
-        <span class="play" aria-hidden="true">
-          <span class="play__btn">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M9 7.5v9l8-4.5-8-4.5Z"/>
-            </svg>
-          </span>
-        </span>
-      </a>
-      <div class="platzi-card__body">
-        <div class="platzi-card__kicker">
-          <img class="platzi-logo" src="{{ '/assets/img/platzi-logo-minty.svg' | relative_url }}" alt="Platzi" loading="lazy" decoding="async" />
-        </div>
-        <div class="platzi-card__title">{{ p.platzi_course.title }}</div>
-        <div class="platzi-card__text">{{ p.platzi_course.claim }}</div>
-        <div class="platzi-card__cta">
-          <a class="btn btn--primary platzi-btn" href="{{ p.platzi_course.url }}" rel="me noopener" target="_blank">
-            {{ t.sections.platzi.cta_view }}
+    <div class="section__head">
+      <h2>
+        <span class="hicon"><svg class="i"><use href="#i-spark"></use></svg></span>
+        {{ t.sections.platzi.title }}
+      </h2>
+      <p class="muted">{{ t.sections.platzi.subtitle }}</p>
+    </div>
+
+    <div class="platzi-list">
+      {% for course in p.platzi_courses %}
+        {% assign open_course_label = t.sections.platzi.open_course | replace: '%{course}', course.title %}
+        <article class="platzi-card" aria-label="{{ course.title }}">
+          <a class="platzi-card__media platzi-media" href="{{ course.url }}" rel="me noopener" target="_blank" aria-label="{{ open_course_label }}">
+            <img class="platzi-thumb" src="{{ course.thumbnail | relative_url }}" alt="{{ course.title }}" loading="lazy" decoding="async" />
+            <span class="play" aria-hidden="true">
+              <span class="play__btn">
+                <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M9 7.5v9l8-4.5-8-4.5Z"/>
+                </svg>
+              </span>
+            </span>
           </a>
-          <a class="btn btn--ghost platzi-btn-ghost" href="#contact">{{ t.sections.platzi.cta_work }}</a>
-        </div>
-      </div>
+          <div class="platzi-card__body">
+            <div class="platzi-card__kicker">
+              <img class="platzi-logo" src="{{ '/assets/img/platzi-logo-minty.svg' | relative_url }}" alt="Platzi" loading="lazy" decoding="async" />
+            </div>
+            <div class="platzi-card__title">{{ course.title }}</div>
+            <div class="platzi-card__text">{{ course.claim }}</div>
+            <div class="platzi-card__cta">
+              <a class="btn btn--primary platzi-btn" href="{{ course.url }}" rel="me noopener" target="_blank">
+                {{ t.sections.platzi.cta_view }}
+              </a>
+              <a class="btn btn--ghost platzi-btn-ghost" href="#contact">{{ t.sections.platzi.cta_work }}</a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
     </div>
   </div>
 </section>

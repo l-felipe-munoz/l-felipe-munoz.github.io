@@ -1129,6 +1129,10 @@ html[data-theme="light"] .lang-card__dial::after {
   box-shadow: 0 24px 80px rgba(0,0,0,0.20);
 }
 
+.platzi-list {
+  display: grid;
+  gap: 18px;
+}
 .platzi-card {
   border: 1px solid rgba(152, 202, 63, 0.28);
   border-radius: var(--radius);
