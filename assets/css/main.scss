@@ -1480,3 +1480,20 @@ html[data-theme="light"] .feature__icon { color: rgba(10, 16, 32, 0.9); }
 }
 
 
+
+/* ---------- Sazón Templates store ---------- */
+.store-hero__grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+.store-title { font-size: clamp(28px, 4vw, 46px); line-height: 1.1; }
+.store-price { margin: 18px 0; font-size: 22px; }
+.store-shot img { width: 100%; height: auto; display: block; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
+.store-benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.store-benefit { align-items: flex-start; }
+.store-sub { margin-top: 32px; }
+.store-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.store-lite { text-align: center; padding: 32px; }
+.store-faq { display: grid; gap: 12px; }
+.store-faq summary { cursor: pointer; }
+.btn[disabled] { opacity: .55; cursor: not-allowed; pointer-events: none; }
+@media (max-width: 860px) {
+  .store-hero__grid, .store-benefits, .store-gallery { grid-template-columns: 1fr; }
+}

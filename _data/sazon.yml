@@ -1,0 +1,82 @@
+es:
+  nav: Plantillas
+  brand: Sazón Templates
+  kicker: Plantillas de Framer para restaurantes
+  name: "Sazón — Plantilla bilingüe de Framer para restaurantes"
+  lead: "Sazón es una plantilla cálida y moderna para restaurantes que atienden en dos idiomas. Cambia entre español e inglés con un clic, recibe reservas directo en WhatsApp con el mensaje ya escrito y administra tu menú, eventos y reseñas desde el CMS, sin programar."
+  price: "COP 116.000"
+  price_note: "≈ USD 29 · pago único"
+  buy: Comprar Sazón
+  soon: Próximamente
+  benefits_title: Por qué Sazón
+  benefits:
+    - t: Bilingüe ES/EN
+      d: Localización nativa de Framer y selector de idioma.
+    - t: Menú editable con CMS
+      d: Categorías, precios y etiquetas (vegano, picante, sin gluten).
+    - t: Reservas por WhatsApp
+      d: Formulario (nombre, fecha, hora, personas) que abre un mensaje listo para enviar.
+    - t: 100 % responsive
+      d: Escritorio, tableta y móvil, con animaciones suaves.
+  includes_title: Incluye
+  includes:
+    - "11 páginas en ES + EN: Inicio, Menú, Plato, Reservas, Eventos, Evento, Nosotros, Contacto, Empieza aquí, Privacidad y 404"
+    - "Insignia «Abierto ahora», mapa, galería, reseñas y preguntas frecuentes"
+    - "Colecciones CMS para menú, categorías, eventos, reseñas y FAQ"
+    - "Ideal para restaurantes, cafés, taquerías, panaderías y bares"
+  gallery_title: Galería
+  gallery: [["cover","Portada de Sazón"],["inicio","Página de inicio"],["menu","Menú con CMS"],["reservas","Reservas por WhatsApp"]]
+  lite_title: Sazón Lite · gratis
+  lite_text: "¿Quieres probar antes? Sazón Lite es la versión gratuita con Inicio, Menú, «Empieza aquí» y 404. Cuando necesites reservas, eventos y las 11 páginas, pasa a la versión completa."
+  lite_btn: Obtener Sazón Lite
+  faq_title: Preguntas frecuentes
+  faq:
+    - q: ¿Qué recibo?
+      a: "Justo después de la compra recibes un enlace de remix de Framer con la plantilla completa en español e inglés."
+    - q: ¿Cómo se usa en Framer?
+      a: "Abre el enlace con tu sesión de Framer iniciada: la plantilla se copia a tu cuenta gratuita y puedes editarla y publicarla. Solo necesitas un plan de sitio de Framer para usar dominio propio. Empieza por la página «Empieza aquí»."
+    - q: ¿Qué licencia tiene?
+      a: "Licencia para usarla en tus propios sitios o en los de tus clientes. No está permitido revenderla ni redistribuirla como plantilla."
+    - q: ¿Hay reembolso?
+      a: "Si la plantilla no funciona como se describe, puedes pedir el reembolso completo dentro de 14 días (política por confirmar)."
+en:
+  nav: Templates
+  brand: Sazón Templates
+  kicker: Framer templates for restaurants
+  name: "Sazón — Bilingual Framer template for restaurants"
+  lead: "Sazón is a warm, modern restaurant template built for places that serve guests in two languages. Switch between English and Spanish in one click, take reservations straight to WhatsApp with a pre-filled message, and manage your menu, events and reviews from the CMS — no code needed."
+  price: "USD 29"
+  price_note: "≈ COP 116,000 · one-time payment"
+  buy: Buy Sazón
+  soon: Coming soon
+  benefits_title: Why Sazón
+  benefits:
+    - t: Bilingual EN/ES
+      d: Framer's native localization with a language switcher.
+    - t: CMS-editable menu
+      d: Category tabs, prices and dietary tags (vegan, spicy, gluten-free).
+    - t: WhatsApp reservations
+      d: Form (name, date, time, guests) that opens a ready-to-send message.
+    - t: Fully responsive
+      d: Desktop, tablet and phone, with smooth animations.
+  includes_title: What's inside
+  includes:
+    - "11 pages in EN + ES: Home, Menu, Dish, Reservations, Events, Event, About, Contact, Start Here, Privacy, 404"
+    - "Live “Open now” hours, map, gallery, reviews and FAQ"
+    - "CMS collections for menu, categories, events, reviews and FAQ"
+    - "Ideal for restaurants, cafés, taquerías, bakeries and bars"
+  gallery_title: Gallery
+  gallery: [["cover","Sazón cover"],["inicio","Home page"],["menu","CMS menu"],["reservas","WhatsApp reservations"]]
+  lite_title: Sazón Lite · free
+  lite_text: "Want to try first? Sazón Lite is the free version with Home, Menu, Start Here and 404. When you need reservations, events and all 11 pages, upgrade to the full template."
+  lite_btn: Get Sazón Lite
+  faq_title: FAQ
+  faq:
+    - q: What do I get?
+      a: "Right after purchase you receive a Framer remix link with the full template in English and Spanish."
+    - q: How do I use it in Framer?
+      a: "Open the link while logged into Framer: the template is copied into your free Framer account and you can edit and publish it. A Framer site plan is only needed for a custom domain. Start with the “Start Here” page."
+    - q: What's the license?
+      a: "Use it for your own sites or your clients' sites. Reselling or redistributing it as a template is not allowed."
+    - q: Is there a refund?
+      a: "If the template doesn't work as described, request a full refund within 14 days (policy to be confirmed)."
