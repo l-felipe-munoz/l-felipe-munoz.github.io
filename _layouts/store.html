@@ -2,11 +2,14 @@
 layout: default
 ---
 {% assign s = site.data.sazon[page.lang] %}
+<div class="sobremesa">
+<header class="sm-bar"><div class="container sm-bar__inner"><img src="{{ '/assets/sazon/sobremesa-horizontal-lema-claro.svg' | relative_url }}" alt="{{ s.brand }} — {{ s.tagline }}" height="40" /></div></header>
 <section class="section store-hero">
   <div class="container store-hero__grid">
     <div>
-      <div class="eyebrow">{{ s.brand }} · {{ s.kicker }}</div>
-      <h1 class="hero__title store-title">{{ s.name }}</h1>
+      <div class="eyebrow">{{ s.kicker }}</div>
+      <h1 class="store-title"><img class="sm-endorsed" src="{{ '/assets/sazon/sazon-endorsed-claro.svg' | relative_url }}" alt="{{ s.logo_alt }}" width="733" height="162" /></h1>
+      <p class="sm-descriptor">{{ s.descriptor }}</p>
       <p class="hero__lead">{{ s.lead }}</p>
       <div class="store-price"><strong>{{ s.price }}</strong> <span class="muted">{{ s.price_note }}</span></div>
       <div class="cta-row">
@@ -19,8 +22,8 @@ layout: default
       </div>
     </div>
     <picture class="store-shot">
-      <source srcset="{{ '/assets/sazon/sazon-cover.webp' | relative_url }}" type="image/webp" />
-      <img src="{{ '/assets/sazon/sazon-cover.jpg' | relative_url }}" alt="{{ s.gallery[0][1] }}" width="1400" height="1050" />
+      <source srcset="{{ '/assets/sazon/sazon-portada.webp' | relative_url }}" type="image/webp" />
+      <img src="{{ '/assets/sazon/sazon-portada.jpg' | relative_url }}" alt="{{ s.gallery[0][1] }}" width="1400" height="1050" />
     </picture>
   </div>
 </section>
@@ -77,3 +80,6 @@ layout: default
     </div>
   </div>
 </section>
+
+<section class="section sm-studio"><div class="container"><p>{{ s.studio_text }}</p></div></section>
+</div>
