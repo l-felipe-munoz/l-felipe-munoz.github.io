@@ -41,6 +41,3 @@ exclude:
   - README.md
 
 
-# Sazón Templates store (leave empty until checkout is live -> button shows "Coming soon")
-sazon_checkout_url: ""
-sazon_lite_url: ""

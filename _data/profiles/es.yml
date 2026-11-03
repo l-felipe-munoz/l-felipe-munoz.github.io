@@ -95,6 +95,19 @@ now_building:
   link: "#featured"
 
 featured_projects:
+  - name: Sobremesa Studio → sobremesatemplates.com
+    logo: /assets/img/sobremesa-icon.svg
+    link: https://sobremesatemplates.com
+    summary: >
+      Sobremesa Studio: estudio de plantillas bilingües (ES/EN) de Framer para restaurantes, con reservas por WhatsApp y menú en CMS. Primera plantilla: Sazón.
+    bullets:
+      - Plantillas Framer bilingües con localización nativa
+      - Reservas por WhatsApp y menú editable en CMS
+      - Venta directa con pago único
+    built_on:
+      - Framer
+      - Jekyll · GitHub Pages
+    note: Proyecto propio · sobremesatemplates.com
   - name: Portal Integral de Procesos — Holding Información Localizada
     logo: /assets/img/servinformacion-logo.png
     summary: >

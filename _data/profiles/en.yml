@@ -95,6 +95,19 @@ now_building:
   link: "#featured"
 
 featured_projects:
+  - name: Sobremesa Studio → sobremesatemplates.com
+    logo: /assets/img/sobremesa-icon.svg
+    link: https://sobremesatemplates.com
+    summary: >
+      Sobremesa Studio: a studio of bilingual (EN/ES) Framer templates for restaurants, with WhatsApp reservations and a CMS menu. First template: Sazón.
+    bullets:
+      - Bilingual Framer templates with native localization
+      - WhatsApp reservations and CMS-editable menu
+      - Direct sales, one-time payment
+    built_on:
+      - Framer
+      - Jekyll · GitHub Pages
+    note: Own project · sobremesatemplates.com
   - name: Integrated Process Portal — HIL Group
     logo: /assets/img/servinformacion-logo.png
     summary: >

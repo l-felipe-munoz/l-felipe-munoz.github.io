@@ -1,29 +1,27 @@
 {% assign lang = page.lang | default: site.lang | default: 'en' %}
 {% assign t = site.data.i18n[lang] %}
 {% assign p = site.data.profiles[lang] %}
-{% if page.layout == 'home' %}{% assign home = '' %}{% elsif lang == 'es' %}{% assign home = '/es/' | relative_url %}{% else %}{% assign home = '/' | relative_url %}{% endif %}
 <nav class="nav" aria-label="Primary">
   <div class="container nav__inner">
     <div class="nav__links">
-      <a href="{{ home }}#about">{{ t.nav.about }}</a>
-      <a href="{{ home }}#featured">{{ t.nav.bycerebro }}</a>
-      <a href="{{ home }}#stack">{{ t.nav.stack }}</a>
-      <a href="{{ home }}#certifications">{{ t.nav.certifications }}</a>
-      <a href="{{ home }}#platzi">{{ t.nav.platzi }}</a>
-      <a href="{{ home }}#experience">{{ t.nav.experience }}</a>
-      <a href="{{ home }}#clients">{{ t.nav.clients }}</a>
-      <a href="{{ home }}#contact">{{ t.nav.contact }}</a>
-      {% if lang == 'es' %}<a href="{{ '/es/plantillas/' | relative_url }}">{{ site.data.sazon.es.nav }}</a>{% else %}<a href="{{ '/en/templates/' | relative_url }}">{{ site.data.sazon.en.nav }}</a>{% endif %}
+      <a href="#about">{{ t.nav.about }}</a>
+      <a href="#featured">{{ t.nav.bycerebro }}</a>
+      <a href="#stack">{{ t.nav.stack }}</a>
+      <a href="#certifications">{{ t.nav.certifications }}</a>
+      <a href="#platzi">{{ t.nav.platzi }}</a>
+      <a href="#experience">{{ t.nav.experience }}</a>
+      <a href="#clients">{{ t.nav.clients }}</a>
+      <a href="#contact">{{ t.nav.contact }}</a>
     </div>
 
     <div class="nav__actions">
       <div class="lang-switch" aria-label="Language switch">
         {% if lang == 'es' %}
-          <a class="lang-pill lang-pill--active" href="{% if page.alt_url and lang == 'en' %}{{ page.alt_url | relative_url }}{% else %}{{ '/es/' | relative_url }}{% endif %}" data-lang-switch="es">{{ t.nav.lang_es }}</a>
-          <a class="lang-pill" href="{% if page.alt_url and lang == 'es' %}{{ page.alt_url | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" data-lang-switch="en">{{ t.nav.lang_en }}</a>
+          <a class="lang-pill lang-pill--active" href="{{ '/es/' | relative_url }}" data-lang-switch="es">{{ t.nav.lang_es }}</a>
+          <a class="lang-pill" href="{{ '/' | relative_url }}" data-lang-switch="en">{{ t.nav.lang_en }}</a>
         {% else %}
-          <a class="lang-pill" href="{% if page.alt_url and lang == 'en' %}{{ page.alt_url | relative_url }}{% else %}{{ '/es/' | relative_url }}{% endif %}" data-lang-switch="es">{{ t.nav.lang_es }}</a>
-          <a class="lang-pill lang-pill--active" href="{% if page.alt_url and lang == 'es' %}{{ page.alt_url | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" data-lang-switch="en">{{ t.nav.lang_en }}</a>
+          <a class="lang-pill" href="{{ '/es/' | relative_url }}" data-lang-switch="es">{{ t.nav.lang_es }}</a>
+          <a class="lang-pill lang-pill--active" href="{{ '/' | relative_url }}" data-lang-switch="en">{{ t.nav.lang_en }}</a>
         {% endif %}
       </div>
       <button class="theme-switch" type="button" data-theme-toggle aria-label="Toggle theme" aria-pressed="false" title="Toggle theme">
